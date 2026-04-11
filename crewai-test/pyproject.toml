@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crewai-reporter"
+version = "0.1.0"
+description = "A classic two-agent CrewAI project that produces a report."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "crewai>=0.95.0",
+  "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

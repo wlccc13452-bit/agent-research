@@ -1,0 +1,72 @@
+collect_raw_weekly_data:
+  description: >
+    Collect internal evidence for {week_period} and {focus} from weekly notes and project files.
+    Capture dates, owners, achievements, blockers, risks, and metric values with source traceability.
+  expected_output: >
+    {"week_period":"string","focus":"string","internal_sources":[{"path":"string","type":"string","reliability":"high|medium|low"}],"raw_events":[{"date":"YYYY-MM-DD","category":"achievement|blocker|risk|decision|metric","detail":"string","owner":"string|null"}],"metrics":[{"name":"string","value":"number|string","unit":"string|null","delta_vs_prev":"string|null"}],"open_questions":["string"]}
+  agent: data_researcher
+  async_execution: false
+
+enrich_with_web_research:
+  description: >
+    Add relevant external signals for {week_period} and {focus} using trustworthy web sources and provide URLs.
+  expected_output: >
+    {"external_sources":[{"title":"string","url":"string","published_date":"YYYY-MM-DD|null","credibility":"high|medium|low"}],"external_findings":[{"topic":"string","insight":"string","relevance":"string","risk_level":"low|medium|high"}],"discarded_sources":[{"url":"string","reason":"string"}]}
+  agent: data_researcher
+  context:
+    - collect_raw_weekly_data
+  async_execution: false
+
+analyze_weekly_insights:
+  description: >
+    Analyze internal and external evidence for {week_period} and {focus}. Produce key insights, confidence,
+    assumptions, and decision-ready findings.
+  expected_output: >
+    {"executive_highlights":["string"],"achievements":[{"item":"string","impact":"string","evidence":"string"}],"blockers":[{"item":"string","severity":"low|medium|high","owner":"string|null","mitigation":"string"}],"risks":[{"item":"string","probability":"low|medium|high","impact":"low|medium|high","mitigation":"string"}],"metric_summary":[{"name":"string","current":"string","delta":"string","interpretation":"string"}],"trend_assessment":"string","confidence":{"overall":"low|medium|high","notes":"string"},"assumptions":["string"]}
+  agent: insight_analyst
+  context:
+    - collect_raw_weekly_data
+    - enrich_with_web_research
+  async_execution: false
+
+produce_json_summary:
+  description: >
+    Produce a compact machine-readable weekly summary for {week_period} and {focus}.
+  expected_output: >
+    {"week_period":"string","focus":"string","overall_status":"on_track|at_risk|off_track","top_3_wins":["string","string","string"],"top_3_issues":["string","string","string"],"next_week_priorities":["string","string","string"],"needs_leadership_attention":["string"]}
+  agent: insight_analyst
+  context:
+    - analyze_weekly_insights
+  async_execution: false
+
+write_weekly_narrative:
+  description: >
+    Write an executive-friendly weekly report narrative in English for {week_period} and {focus}
+    using analyzed insights and summary JSON.
+  expected_output: >
+    Markdown with sections: Weekly Overview, Major Achievements, Metrics and Trends, Blockers and Risks, Decisions and Learnings, Priorities for Next Week, Support Needed.
+  agent: report_writer
+  context:
+    - analyze_weekly_insights
+    - produce_json_summary
+  async_execution: false
+
+format_notion_ready_markdown:
+  description: >
+    Convert the narrative draft into polished Markdown optimized for Notion paste.
+    Keep the required section order and output only final Markdown.
+  expected_output: >
+    # Weekly Report: {week_period}
+    ## Focus
+    ## Executive Summary
+    ## Achievements
+    ## Metrics
+    ## Blockers & Risks
+    ## Decisions & Learnings
+    ## Next Week Priorities
+    ## Leadership Support Needed
+    ## Action Checklist
+  agent: markdown_formatter
+  context:
+    - write_weekly_narrative
+  async_execution: false
