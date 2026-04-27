@@ -1,0 +1,12 @@
+@import "../../../common/lib/weui.ttss";
+
+.picker{
+  padding: 19rpx 32rpx;
+  background-color: #FFFFFF;
+}
+
+.section__title{
+  padding: 48rpx 32rpx 8rpx 32rpx;
+  font-size: medium;
+  color: #999999;
+}

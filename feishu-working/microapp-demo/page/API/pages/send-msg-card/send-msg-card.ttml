@@ -1,0 +1,119 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template data="{{title: 'sendMessageCard'}}" is="head" />
+
+	<view class="page-body">
+		<view class="page-section">
+			<view class="page-section-title">CardContent</view>
+			<view class="page-section-title card_content">
+				<input bindblur="bindTextAreaBlur" value="Demo默认值"/>
+            </view>
+        </view>
+		<view class="page-section-title">ShouldChooseChat</view>
+		<view class="page-section page-section-gap">
+			<radio-group bindchange="shouldChooseChat">
+				<label class="radio">
+                    <radio checked='true' value="true"/>
+                    true
+                </label>
+                <label class="radio">
+                    <radio value="false"/>
+                    false
+                </label>
+            </radio-group>
+        </view>
+
+        <view class="page-section-title">withAdditionalMessage</view>
+		<view class="page-section page-section-gap">
+			<radio-group bindchange="withAdditionalMessage">
+				<label class="radio">
+                    <radio checked='true' value="true"/>
+                    true
+                </label>
+                <label class="radio">
+                    <radio value="false"/>
+                    false
+                </label>
+            </radio-group>
+        </view>
+
+		<view class="page-section-title">Choose mode</view>
+		<view class="page-section page-section-gap">
+			<radio-group bindchange="selectModeChange">
+				<label class="radio">
+                    <radio checked='true' value="false"/>
+                    single
+                </label>
+                <label class="radio">
+                    <radio value="true"/>
+                    multi
+                </label>
+            </radio-group>
+        </view>
+        <view class="page-section-title">Choose type</view>
+        <view class="page-section page-section-gap">
+            <radio-group bindchange="selectTypeChange">
+                <label class="radio">
+                    <radio checked="true" value="0"/>
+                    Person/Group chat
+                </label>
+                <label class="radio">
+                    <radio value="1"/>
+                    Group chat
+                </label>
+
+                <label class="radio">
+                    <radio value="2"/>
+                    Person chat
+                </label>
+            </radio-group>
+        </view>
+
+        <view class="page-section-title">Other option</view>
+        <view class="page-section page-section-gap">
+            <checkbox-group bindchange="otherValueChange">
+                <label class="radio">
+                    <checkbox value="0"/>
+                    Ignore self
+                </label>
+                <label class="radio">
+                    <checkbox value="1"/>
+                    Allow create Group
+                </label>
+            </checkbox-group>
+        </view>
+
+        <view class="page-section-title">External chat</view>
+        <view class="page-section page-section-gap">
+            <radio-group bindchange="selectExternalChat">
+                <label class="radio">
+                    <radio checked='true' value="true"/>
+                    true
+                </label>
+                <label class="radio">
+                    <radio value="false"/>
+                    false
+                </label>
+            </radio-group>
+        </view>
+
+        <view class="chat_btn-area">
+            <button bindtap="chooseChat" type="primary">ChooseChat</button>
+        </view>
+
+        <view class="chat_btn-area">
+            <button bindtap="sendMessageCard" type="primary">SendMsgCard</button>
+        </view>
+    </view>
+
+    <view class="show_result">
+        <view tt:for="{{chats}}">
+            <view class="show_result">name：{{item.name}}</view>
+            <view class="show_result">openchatid：{{item.id}}</view>
+            <view class="show_result_margin">chattype: {{item.chatType}}</view>
+        </view>
+    </view>
+    <template is="foot"/>
+</view>

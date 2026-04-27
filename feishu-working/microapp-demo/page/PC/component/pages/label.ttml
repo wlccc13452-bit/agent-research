@@ -1,0 +1,39 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{label_title_one}}</view>
+    <checkbox-group class="group" bindchange="checkboxChange">
+      <view class="label-1" tt:for="{{checkboxItems}}">
+        <label class="label">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+          <text class="label-1-text">{{item.value}}</text>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <!-- <view class="section">
+    <view class="title">{{label_title_two}}</view>
+    <radio-group class="group" bindchange="radioChange">
+      <view class="label-2" tt:for="{{radioItems}}">
+        <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+        <label class="label-2-text" for="{{item.name}}">
+          <text>{{item.name}}</text>
+        </label>
+      </view>
+    </radio-group>
+  </view> -->
+  <view class="section">
+    <view class="title">{{label_title_three}}</view>
+      <view>
+        <label class="label label-3">
+          <view class="checkbox-container">
+            <checkbox class="checkbox-3"/>{{option_one}}</checkbox>
+          </view>
+          <view class="checkbox-container">
+            <checkbox class="checkbox-3"/>{{option_two}}</checkbox>
+          </view>
+          <view class="label-3-text">{{default_one}}</view>
+        </label>
+      </view>
+    </view>
+  </view>
+</view>

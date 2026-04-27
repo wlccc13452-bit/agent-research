@@ -1,0 +1,118 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'getSystemInfo'}}" />
+
+	<view class="page-body">
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__hd">
+						<view class="weui-label">{{mobile_phone_brands}}</view>
+					</view>
+					<view class="weui-cell__bd">
+						<input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.brand}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{phone_model}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.model}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{device_pixel_ratio}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.pixelRatio}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{window}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.windowWidth}} × {{systemInfo.windowHeight}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{screen}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.screenWidth}} × {{systemInfo.screenHeight}}"></input>
+          </view>
+        </view>
+                <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{statusbar_height}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.statusBarHeight}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{app_version}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.version}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{system_version}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.system}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{system_type}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.platform}}"></input>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{sdk_version}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.SDKVersion}}"></input>
+          </view>
+        </view>
+        
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{language}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.language}}"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{font_size}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" disabled="{{true}}" placeholder={{not_acquired}} value="{{systemInfo.fontSizeSetting}}"></input>
+          </view>
+        </view>
+        
+      <view class="btn-area">
+        <button type="primary" bindtap="getSystemInfo">{{get_cellphone_system_info}}</button>
+        <button bindtap="clear">{{clear}}</button>
+        <button type="primary" bindtap="getSystemInfoSync">{{sync_get_cellphone_system_info}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

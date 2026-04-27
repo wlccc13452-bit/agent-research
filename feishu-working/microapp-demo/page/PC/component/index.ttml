@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="side-left">
+    <view>
+      <view class="menu_container">
+        <view class="title" bindtap="toggleMenu1">{{component}}<view class="arrow-icon {{ hide_1 ? '' : 'opened'}}"></view></view>
+        <view class="hr"></view>
+        <Menu data={{menuData[0]}} activeItemIdx={{activeItemIdx0}} data-key="0" bindclick="onClick" hide={{hide_1}}>
+        </Menu>
+      </view>
+      <view class="menu_container">
+        <view class="title" bindtap="toggleMenu2">{{api}}<view class="arrow-icon {{ hide_2 ? '' : 'opened'}}"></view></view>
+        <view class="hr"></view>
+        <Menu data={{menuData[1]}} activeItemIdx={{activeItemIdx1}} activeSubMenuIndex='-1' data-key="1" bindclick="onClick"  hide={{hide_2}}>
+        </Menu>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <Content current-key="{{currentPage}}">
+      <pButton/>
+      <pIcon/>
+      <pText/>
+      <!-- <pRichtext/> -->
+      <pProgress/>
+
+      <pView/>
+      <pScrollView/>
+      <!-- <pSwiper/> -->
+      <pCheckbox/>
+      <!-- <pForm/> -->
+
+      <pInput/>
+      <pLabel/>
+      <pPicker/>
+      <!-- <pPickerView/> -->
+      <pSlider/>
+
+      <pSwitch/>
+      <pTextarea/>
+      <!-- <pNavigator/> -->
+      <pImage/>
+      <pVideo/>
+
+      <pCanvas/>
+      <pRadio/>
+      <pWebView/>
+
+      <pFeed/>
+
+    </Content>
+  </view>
+</view>

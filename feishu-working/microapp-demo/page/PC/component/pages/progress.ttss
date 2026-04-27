@@ -1,0 +1,10 @@
+@import "/page/PC/common/index.ttss";
+
+.progress-container {
+  margin-bottom: 40px;
+}
+
+.progress-container .progress {
+  width: 80%;
+  margin-right: 34px;
+}

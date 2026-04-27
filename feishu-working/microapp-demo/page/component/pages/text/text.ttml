@@ -1,0 +1,12 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="text-box">
+  <view><text>{{demo_text}}</text></view>
+  <view><text selectable>{{select_texts}}</text></view>
+  <view><text decode>&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text></view>
+  <view><text space="ensp">{{spaces}}</text></view>
+  <view><text space="nbsp">{{spaces}}</text></view>
+  <view><text space="emsp">{{spaces}}</text></view>
+  <view><text>hello\nworld</text></view>
+  <template is="foot" />
+</view>

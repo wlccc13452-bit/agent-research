@@ -1,0 +1,88 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">{{auto_focus_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" auto-focus placeholder={{auto_focus_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{maxlength_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" maxlength=10 placeholder={{maxlength_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{realtime_input+inputValue}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width"  maxlength=20 bindinput="bindKeyInput" placeholder={{syncview_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{control_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width"  bindinput="bindReplaceInput" placeholder={{control_placeholder}} />
+        </view>
+      </view>
+    </view>
+   <!-- <view class="page-section">
+      <view class="weui-cells__title">{{control_keyboard}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width"  bindinput="bindHideKeyboard" placeholder={{control_keyboard_placeholder}} />
+        </view>
+      </view>
+    </view> -->
+    <view class="page-section">
+      <view class="weui-cells__title">{{number_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" type="number" placeholder={{number_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{secret_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" password type="text" placeholder={{secret_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{decimal_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" type="digit" placeholder={{decimal_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{id_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" type="idcard" placeholder={{id_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">{{color_input}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" placeholder-style="color:#F76260" placeholder={{color_input_placeholder}} />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

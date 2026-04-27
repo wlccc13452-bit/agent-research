@@ -1,0 +1,55 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'Bluetooth-BLE'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view>{{state}}</view>
+      <button class="bluetooth-button" bindtap="openBluetoothAdapter">{{openBluetoothAdapter}}</button>
+      <button class="bluetooth-button" bindtap="closeBluetoothAdapter">{{closeBluetoothAdapter}}</button>
+      <button class="bluetooth-button" bindtap="getBluetoothAdapterState">{{getBluetoothAdapterState}}</button>
+    </view>
+    <view class="page-section">
+      <view>{{discover}}</view>
+      <button class="bluetooth-button" bindtap="startBluetoothDevicesDiscovery">{{startBluetoothDevicesDiscovery}}</button>
+      <button class="bluetooth-button" bindtap="getBluetoothDevices">{{getBluetoothDevices}}</button>
+      <button class="bluetooth-button" bindtap="getConnectedBluetoothDevices">{{getConnectedBluetoothDevices}}</button>
+      <button class="bluetooth-button" bindtap="stopBluetoothDevicesDiscovery">{{stopBluetoothDevicesDiscovery}}</button>
+    </view>
+    <view class="page-section">
+      <view>{{connect}}</view>
+      <!-- <button class="bluetooth-button" bindtap="setSpecialData">连接考勤机</button> -->
+      <picker bindchange="connectBLEDevice" value="{{deviceIndex}}" range="{{showDevices}}">
+        <button class="bluetooth-button">{{connect}}</button>
+      </picker>
+      <button class="bluetooth-button" bindtap="setBLEMTU">{{setMTU}}</button>
+      <button class="bluetooth-button" bindtap="getBLEDeviceServices">{{getBLEDeviceServices}}</button>
+      <picker bindchange="selectServiceId" value="{{serviceIndex}}" range="{{showServices}}">
+        <button class="bluetooth-button">{{selectBLEDeviceService}}</button>
+      </picker>
+      <button class="bluetooth-button" bindtap="getBLEDeviceCharacteristics">{{getBLEDeviceCharacteristics}}</button>
+      <button class="bluetooth-button" bindtap="disconnectBLEDevice">{{disconnectBLEDevice}}</button>
+    </view>
+    <view class="page-section">
+      <view>{{handleData}}</view>
+      <picker bindchange="selectCharId" value="{{charIndex}}" range="{{showChars}}">
+        <button class="bluetooth-button">{{selectBLEDeviceCharacteristics}}</button>
+      </picker>
+      <button class="bluetooth-button" bindtap="notifyBLECharacteristicValueChange">{{notifyBLECharacteristicValueChange}}</button>
+      <button class="bluetooth-button" bindtap="readBLECharacteristicValue">{{readBLECharacteristicValue}}</button>
+      <button class="bluetooth-button" bindtap="writeBLECharacteristicValue">{{writeBLECharacteristicValue}}</button>
+      <button class="bluetooth-button" bindtap="offBLECharacteristicValueChange">{{offBLECharacteristicValueChange}}</button>
+    </view>
+    <view class="page-section">
+      <view>{{others}}</view>
+      <button class="bluetooth-button" bindtap="bluetoothAdapterStateChange">{{bluetoothAdapterStateChange}}</button>
+      <button class="bluetooth-button" bindtap="offBluetoothAdapterStateChange">{{offBluetoothAdapterStateChange}}</button>
+      <button class="bluetooth-button" bindtap="BLEConnectionStateChanged">{{BLEConnectionStateChanged}}</button>
+      <button class="bluetooth-button" bindtap="offBLEConnectionStateChanged">{{offBLEConnectionStateChanged}}</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

@@ -1,0 +1,47 @@
+.page-body image {
+  width: 600rpx;
+  height: 600rpx;
+  margin: 0 75rpx;
+}
+.video-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress-box{
+  display: flex;
+  height: 50rpx;
+  margin-bottom: 60rpx;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  width: 800rpx;
+  height: max-content;
+}
+
+.io_area {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: min-content;
+  border-width: 1rpx;
+  border-color: blue;
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.io_title {
+  font: bold;
+  font-size: 40rpx;
+  color: blue;
+}
+
+.io_content {
+  border: 2rpx solid red;
+  word-wrap: break-word;
+  word-break: break-all;
+}

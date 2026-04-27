@@ -1,0 +1,46 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{type}}</view>
+    <view class="icon-container">
+      <icon class="icon" type="success"></icon>
+      success
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="success_no_circle"></icon>
+      success-no-circle
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="info"></icon>
+      info
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="warn"></icon>
+      warn
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="error"></icon>
+      clear/error
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="cancel"></icon>
+      cancel
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="download"></icon>
+      download
+    </view>
+    <view class="icon-container">
+      <icon class="icon" type="search"></icon>
+      search
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{size}} / {{color}}</view>
+    <view class="icon-container inline">
+      <icon class="icon" type="success" size="48" color="#c3c6cb"></icon>
+      <icon class="icon" type="success" size="40" color="#29cca3"></icon>
+      <icon class="icon" type="success" size="32" color="#3377ff"></icon>
+      <icon class="icon" type="success" size="24" color="#1f2329"></icon>
+    </view>
+  </view>
+</view>

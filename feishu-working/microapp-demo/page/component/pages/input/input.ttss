@@ -1,0 +1,9 @@
+@import "../../../common/lib/weui.ttss";
+
+.page-section{
+  margin-bottom: 20rpx;
+}
+
+.input-width {
+  width: 100%;
+}

@@ -1,0 +1,5 @@
+<view class="page-container show">
+  <view class="section">
+    <web-view src="https://open.feishu.cn/" bindload="loadDone" binderror = "errorLoad" progressbar-color="#CC3333"></web-view>
+  </view>
+</view>

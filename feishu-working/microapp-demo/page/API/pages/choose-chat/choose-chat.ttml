@@ -1,0 +1,95 @@
+<import src="../../../common/head.ttml"/>
+<import src="../../../common/foot.ttml"/>
+
+<view class="container">
+    <template data="{{title: 'chooseChat'}}" is="head"/>
+
+    <view class="page-body">
+        <view class="page-section-title">Choose mode</view>
+        <view class="page-section page-section-gap">
+            <radio-group bindchange="selectModeChange">
+                <label class="radio">
+                    <radio checked='true' value="false"/>
+                    single
+                </label>
+                <label class="radio">
+                    <radio value="true"/>
+                    multi
+                </label>
+            </radio-group>
+        </view>
+        <view class="page-section-title">Choose type</view>
+        <view class="page-section page-section-gap">
+            <radio-group bindchange="selectTypeChange">
+                <label class="radio">
+                    <radio checked="true" value="0"/>
+                    Person/Group chat
+                </label>
+                <label class="radio">
+                    <radio value="1"/>
+                    Group chat
+                </label>
+
+                <label class="radio">
+                    <radio value="2"/>
+                    Person chat
+                </label>
+            </radio-group>
+        </view>
+
+        <view class="page-section-title">Other option</view>
+        <view class="page-section page-section-gap">
+            <checkbox-group bindchange="otherValueChange">
+                <label class="radio">
+                    <checkbox value="0"/>
+                    Ignore self
+                </label>
+                <label class="radio">
+                    <checkbox value="1"/>
+                    Allow create Group
+                </label>
+            </checkbox-group>
+        </view>
+
+        <view class="page-section-title">External chat</view>
+        <view class="page-section page-section-gap">
+            <radio-group bindchange="selectExternalChat">
+                <label class="radio">
+                    <radio checked='true' value="true"/>
+                    true
+                </label>
+                <label class="radio">
+                    <radio value="false"/>
+                    false
+                </label>
+            </radio-group>
+        </view>
+
+        <view class="page-section">
+            <view class="page-section-title">ConfirmDialog Title</view>
+            <view class="page-section-title input_cell">
+                <input bindinput="titleInput" class="weui-input" placeholder="confirm dialog title"/>
+            </view>
+        </view>
+
+        <view class="page-section ">
+            <view class="page-section-title">ConfirmDialog Description</view>
+            <view class="page-section-title input_cell">
+                <input bindinput="descInput" class="weui-input" placeholder="confirm dialog description"/>
+            </view>
+        </view>
+
+        <view class="chat_btn-area">
+            <button bindtap="chooseChat" type="primary">Click me to choose</button>
+        </view>
+    </view>
+
+    <view class="show_result">
+        <view tt:for="{{chats}}">
+            <view class="show_result">name：{{item.name}}</view>
+            <text selectable=true class="show_result">openchatid：{{item.id}}</text>
+            <view class="show_result_margin">chattype: {{item.chatType}}</view>
+        </view>
+    </view>
+    <template is="foot"/>
+</view>

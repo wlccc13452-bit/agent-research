@@ -1,0 +1,28 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'createIntersectionObserver'}}"/>
+
+  <view class="page-body">
+    <view class="page-section message">
+      <text tt:if="{{appear}}">
+        {{ball_appear}}
+      </text>
+      <text tt:else>
+        {{ball_disappear}}
+      </text>
+    </view>
+    <view class="page-section">
+      <scroll-view class="scroll-view" scroll-y>
+        <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+          <text class="notice">{{tip}}</text>
+          <view class="filling"></view>
+          <view class="ball"></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

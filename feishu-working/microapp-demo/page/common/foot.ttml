@@ -1,0 +1,9 @@
+<template name="foot">
+  <navigator class="page-foot"
+    tt:if="{{ false }}"
+    openType="switchTab"
+    url="/page/component/index"
+    hover-class="none">
+    <image class="icon-foot" src="https://sf3-cn.feishucdn.com/obj/open-platform-opendoc/352be4df0bb43e9d7f4489a8790c9efc_BxFuTMfLT2.png"></image>
+  </navigator>
+</template>

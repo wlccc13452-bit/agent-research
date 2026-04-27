@@ -1,0 +1,16 @@
+.bluetooth-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bluetooth-button {
+  font-size: 32rpx;
+  margin: 16rpx 32rpx;
+}
+
+.bluetooth-view {
+  padding: 0 32rpx;
+  height: 64rpx;
+  display: flex;
+  justify-content: space-between;
+}

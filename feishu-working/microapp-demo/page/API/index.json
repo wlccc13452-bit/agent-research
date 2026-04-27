@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "Api Sample",
+    "usingComponents": {
+        "set-tab-bar": "components/set-tab-bar/set-tab-bar"
+    }
+}

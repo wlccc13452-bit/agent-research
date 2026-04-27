@@ -1,0 +1,29 @@
+
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>{{direction_row}}</text>
+      </view>
+    <view>
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction:row;">
+          <view hover-class="hover" class="flex-item demo-text-1"></view>
+          <view hover-class="hover" class="flex-item demo-text-2"></view>
+          <view hover-class="hover" class="flex-item demo-text-3"></view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>{{direction_column}}</text>
+      </view>
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V demo-text-1"></view>
+        <view class="flex-item flex-item-V demo-text-2"></view>
+        <view class="flex-item flex-item-V demo-text-3"></view>
+      </view>
+    </view>
+  </view>
+</view>

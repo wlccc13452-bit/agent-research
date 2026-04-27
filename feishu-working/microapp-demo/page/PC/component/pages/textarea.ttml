@@ -1,0 +1,14 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <!-- <view class="section">
+    <view class="title">{{height_auto_fix_textarea}}</view>
+    <view class="textarea-container">
+      <textarea bindblur="bindTextAreaBlur" auto-height />
+    </view>
+  </view> -->
+  <view class="section">
+    <view class="title">{{auto_focus_textare}}</view>
+    <view class="textarea-container">
+      <textarea class="textarea" auto-focus="true"/>
+    </view>
+  </view>
+</view>

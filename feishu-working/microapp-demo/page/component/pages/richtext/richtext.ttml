@@ -1,0 +1,46 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<view class="page-body">
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_switch">
+					<view class="weui-cell__bd">{{need_upload}}</view>
+					<view class="weui-cell__ft">
+						<switch checked bindchange="uploadPic" />
+					</view>
+				</view>
+				<view class="weui-cell weui-cell_switch">
+					<view class="weui-cell__bd">{{need_pickerview}}</view>
+					<view class="weui-cell__ft">
+						<switch checked bindchange="showPickerView" />
+					</view>
+				</view>
+				<view class="weui-cell weui-cell_switch">
+					<view class="weui-cell__bd">{{need_contact}}</view>
+					<view class="weui-cell__ft">
+						<switch checked bindchange="atContact" />
+					</view>
+				</view>
+				<view class="weui-cell weui-cell_switch">
+					<view class="weui-cell__bd">{{need_emoji}}</view>
+					<view class="weui-cell__ft">
+						<switch checked bindchange="inputEmoji" />
+					</view>
+				</view>
+
+				<view class="weui-cell weui-cell_switch">
+					<view class="weui-cell__bd">{{enable_return_key}}</view>
+					<view class="weui-cell__ft">
+						<switch checked bindchange="enableReturnKey" />
+					</view>
+				</view>
+			</view>
+			<view class="btn-area">
+				<button type="primary" bindtap="showRichText">{{pop_richtext}}</button>
+			</view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

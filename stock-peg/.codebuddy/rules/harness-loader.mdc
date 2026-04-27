@@ -1,0 +1,38 @@
+---
+description: Register /harness as context bootstrap command for harness engineering
+alwaysApply: true
+enabled: true
+updatedAt: 2026-03-14T10:00:00.000Z
+provider: 
+---
+
+# Harness Loader Command
+
+## Trigger
+When user types `/harness` or says "load harness" or "activate harness"
+
+## Actions
+Immediately read the following files in order:
+1. `.harness/progress.md` - Current project progress
+2. `.harness/decisions.md` - Technical decisions made
+3. `.harness/memory/core-facts.md` - Eternal facts and style preferences
+4. `.harness/AGENTS.md` - Global rules and project overview
+
+If a non-required file is missing, continue with defaults:
+- progress.md → "Initial startup"
+- decisions.md → "No decisions recorded"
+- core-facts.md → "No core facts"
+
+If `.harness/AGENTS.md` is missing, stop and report harness is not initialized.
+
+## Response Format
+After reading all files, respond in this structure:
+1. `Harness loaded`
+2. `Loaded files: [list with absolute paths]`
+3. `Current progress: [one-line summary from progress.md]`
+4. `Ready for task`
+
+## Important
+- Do NOT proceed to any task until user gives next instruction
+- This ensures full context is loaded before any work begins
+- `/harness` is only a loader command. It does not execute `/update-memory`.

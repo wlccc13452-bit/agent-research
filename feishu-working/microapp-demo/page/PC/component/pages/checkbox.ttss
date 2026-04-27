@@ -1,0 +1,18 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 18px; 
+}
+
+.checkbox {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.checkbox-container {
+  margin-bottom: 18px;
+}
+
+.checkbox-container:last-child {
+  margin-bottom: 0;
+}

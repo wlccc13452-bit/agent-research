@@ -1,0 +1,20 @@
+[
+  {
+    "id": "msg-1773880389299-byo519",
+    "from": "team-lead",
+    "to": "app-layer-analyzer",
+    "type": "message",
+    "content": "sdk-analyzer has completed analysis and found a critical issue: websocket_service.py violates SDK independence by importing application-layer constants. Please complete your analysis so we can provide comprehensive recommendations.",
+    "timestamp": "2026-03-19T00:33:09.299Z",
+    "read": true
+  },
+  {
+    "id": "shutdown-1773880463491",
+    "from": "team-lead",
+    "to": "app-layer-analyzer",
+    "type": "shutdown_request",
+    "content": "{\"type\":\"shutdown_request\",\"request_id\":\"shutdown-1773880463491\",\"reason\":\"Analysis complete. All team members have finished their work. Preparing to shutdown.\",\"from\":\"team-lead\",\"timestamp\":\"2026-03-19T00:34:23.491Z\"}",
+    "timestamp": "2026-03-19T00:34:23.491Z",
+    "read": true
+  }
+]

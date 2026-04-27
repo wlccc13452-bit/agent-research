@@ -1,0 +1,69 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{custom_picker}}</view>
+    <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker-trigger">
+        <button>{{current_option}}{{array[index]}}</button>
+      </view>
+    </picker>
+  </view>
+
+  <!-- <view class="section">
+    <view class="title">{{custom_object_picker}}</view>
+    <picker bindchange="bindObjectPickerChange" value="{{objectIndex}}" range="{{objectArray}}" range-key="en">
+      <view class="picker">
+        <button>{{current_option}}{{objectArray[objectIndex]['en']}}</button>
+      </view>
+    </picker>
+  </view> -->
+
+  <view class="section">
+    <view class="title">{{multiSelector}}</view>
+    <picker class="picker" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker-trigger">
+        <button>{{current_option}}{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}</button>
+      </view>
+    </picker>
+  </view>
+  <!-- <view class="section">
+    <view class="title">{{time_picker}}</view>
+    <picker class="picker" mode="time" value="{{time}}" start="{{timeStart}}" end="{{timeEnd}}" bindchange="bindTimeChange">
+      <view class="picker-trigger">
+        <button>{{current_option}} {{time}}</button>
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <view class="title">{{date_picker}}</view>
+    <picker class="picker" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindYearDateChange" fields="year">
+      <view class="picker-trigger">
+        <button>{{current_option}} {{yearDate}}</button>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="title">{{date_picker}}</view>
+    <picker class="picker" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindMonthDateChange" fields="month">
+      <view class="picker-trigger">
+        <button>{{current_option}} {{monthDate}}</button>
+      </view>
+    </picker>
+  </view> -->
+  <view class="section">
+    <view class="title">{{date_picker}}</view>
+    <picker class="picker" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDayDateChange" fields="day">
+      <view class="picker-trigger">
+        <button>{{current_option}} {{dayDate}}</button>
+      </view>
+    </picker>
+  </view>
+  <!-- <view class="section">
+    <view class="title">Province City District picker</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+            {{current_option}}{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view> -->
+</view>

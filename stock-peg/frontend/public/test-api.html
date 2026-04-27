@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>API连接诊断</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; background: #1a1a1a; color: #e0e0e0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { color: #4fc3f7; border-bottom: 2px solid #4fc3f7; padding-bottom: 10px; }
+        .test { background: #2a2a2a; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid #ff9800; }
+        .test.success { border-left-color: #4caf50; }
+        .test.error { border-left-color: #f44336; }
+        .test h3 { margin: 0 0 10px 0; color: #fff; }
+        .info { color: #aaa; font-size: 14px; margin: 5px 0; }
+        pre { background: #1a1a1a; padding: 10px; overflow-x: auto; font-size: 12px; border-radius: 4px; }
+        button { background: #4fc3f7; color: #000; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; margin: 10px 0; }
+        button:hover { background: #29b6f6; }
+        button:disabled { background: #666; cursor: not-allowed; }
+        .ws-status { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .ws-status.connected { background: #4caf50; }
+        .ws-status.disconnected { background: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 API连接诊断工具</h1>
+        <div class="info">此页面直接测试后端API连接，绕过前端框架和代理</div>
+        <button onclick="runTests()" id="testBtn">开始测试</button>
+        <div id="results"></div>
+        
+        <h2 style="color: #4fc3f7; margin-top: 30px;">📡 WebSocket状态</h2>
+        <div id="wsStatus" class="test">
+            <span class="ws-status disconnected" id="wsIndicator"></span>
+            <span id="wsInfo">未连接</span>
+        </div>
+    </div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+        const testBtn = document.getElementById('testBtn');
+        
+        // WebSocket测试
+        let ws = null;
+        function testWebSocket() {
+            const wsUrl = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.hostname}:8000/ws`;
+            const indicator = document.getElementById('wsIndicator');
+            const info = document.getElementById('wsInfo');
+            
+            try {
+                ws = new WebSocket(wsUrl);
+                
+                ws.onopen = () => {
+                    indicator.className = 'ws-status connected';
+                    info.textContent = `已连接 (${wsUrl})`;
+                };
+                
+                ws.onclose = () => {
+                    indicator.className = 'ws-status disconnected';
+                    info.textContent = `已断开`;
+                };
+                
+                ws.onerror = (err) => {
+                    indicator.className = 'ws-status disconnected';
+                    info.textContent = `连接失败: ${err}`;
+                };
+            } catch (err) {
+                indicator.className = 'ws-status disconnected';
+                info.textContent = `WebSocket不可用: ${err.message}`;
+            }
+        }
+        
+        // API测试
+        async function testAPI(name, url) {
+            const testDiv = document.createElement('div');
+            testDiv.className = 'test';
+            testDiv.innerHTML = `<h3>${name}</h3><p class="info">测试中...</p>`;
+            resultsDiv.appendChild(testDiv);
+            
+            const startTime = Date.now();
+            try {
+                const response = await fetch(url);
+                const elapsed = Date.now() - startTime;
+                const data = await response.json();
+                
+                testDiv.className = 'test success';
+                testDiv.innerHTML = `
+                    <h3>${name}</h3>
+                    <p class="info"><strong>状态:</strong> ${response.status} OK | <strong>耗时:</strong> ${elapsed}ms</p>
+                    <p class="info"><strong>URL:</strong> ${url}</p>
+                    <details>
+                        <summary>响应数据 (${Array.isArray(data.sectors) ? data.sectors.length + ' 个板块' : '...'})</summary>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </details>
+                `;
+                return { success: true, elapsed, data };
+            } catch (err) {
+                const elapsed = Date.now() - startTime;
+                testDiv.className = 'test error';
+                testDiv.innerHTML = `
+                    <h3>${name}</h3>
+                    <p class="info"><strong>错误:</strong> ${err.message}</p>
+                    <p class="info"><strong>耗时:</strong> ${elapsed}ms</p>
+                    <p class="info"><strong>URL:</strong> ${url}</p>
+                `;
+                return { success: false, error: err.message, elapsed };
+            }
+        }
+        
+        async function runTests() {
+            testBtn.disabled = true;
+            resultsDiv.innerHTML = '';
+            
+            // 测试不同的URL
+            const baseUrl = `http://${window.location.hostname}:8000`;
+            
+            await testAPI('1️⃣ 后端健康检查', `${baseUrl}/health`);
+            await testAPI('2️⃣ 自持股票（直接）', `${baseUrl}/api/holdings/`);
+            await testAPI('3️⃣ 自持股票（代理）', `/api/holdings/`);
+            await testAPI('4️⃣ 热点关注', `${baseUrl}/api/daily-watchlist/summary?limit=10`);
+            await testAPI('5️⃣ 指数行情', `${baseUrl}/api/stocks/indices/quotes`);
+            
+            // 测试WebSocket
+            testWebSocket();
+            
+            testBtn.disabled = false;
+            testBtn.textContent = '重新测试';
+        }
+    </script>
+</body>
+</html>

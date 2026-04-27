@@ -1,0 +1,11 @@
+[
+  {
+    "id": "msg-1773908431355-90uyi7",
+    "from": "feishu-bot-migrator",
+    "to": "db-ops-explorer",
+    "type": "message",
+    "content": "我已完成 feishu_bot 模块的数据库操作扫描，发现以下需要迁移的内容：\n\n**1. bot_handlers.py (62-195行):**\n- `save_chat_message_async()`: 直接使用 `select(FeishuChatMessage)` 查询、`db.add()`、`db.commit()`\n- `save_chat_message()`: 同步版本，直接使用 `db.query()`、`db.add()`、`db.commit()`\n\n**2. stock_business_service.py:**\n- Line 302-329: `_handle_watchlist_add()` 使用 `async_session_maker()` 和直接数据库操作\n- Line 372-392: `_handle_price_alert_submission()` 使用 `async_session_maker()` \n- Line 442-460: `_handle_monitor_task_submission()` 使用 `async_session_maker()`\n- Line 476-490: `stop_alert_monitoring()` 使用 `async_session_maker()`\n- Line 509-534: `modify_alert_threshold()` 使用 `async_session_maker()`\n- Line 578-603: `quick_adjust_threshold()` 使用 `async_session_maker()`\n- Line 681-716: `_delete_from_watchlist()` 直接使用 `select(DailyWatchlist)` 和 `session.execute()`\n- Line 842-870: `get_watchlist_stocks_async()` 直接使用 `select(DailyWatchlist)`\n\n**已有 operations 函数:**\n- chat_message_ops.py: `save_chat_message()` (已存在)\n- watchlist_ops.py: `add_to_watchlist()`, `remove_from_watchlist()`, `check_watchlist_exists()`, `get_all_dates()`, `get_recent_watchlist_stocks()`\n- price_alert_ops.py: `create_price_alert()`, `stop_alert_monitoring()`, `get_alert_by_id()`, `adjust_alert_threshold()`\n\n**缺少的 operations 函数:**\n1. `get_watchlist_by_stock()` - 按股票代码和名称查询关注列表（用于删除操作）\n\n我现在开始迁移工作，将更新服务文件以使用 operations 层函数。",
+    "timestamp": "2026-03-19T08:20:31.355Z",
+    "read": true
+  }
+]

@@ -1,0 +1,78 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+			<!-- <button bindtap="topButtopClick">{{tip}}</button> -->
+      <view class="section">
+        <view class="section__title">{{custom_picker}}</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{current_option}}{{array[index]}}
+          </view>
+        </picker>
+      </view>
+			
+			<view class="section">
+        <view class="section__title">{{custom_object_picker}}</view>
+        <picker bindchange="bindObjectPickerChange" value="{{objectIndex}}" range="{{objectArray}}" range-key="en">
+          <view class="picker">
+            {{current_option}}{{objectArray[objectIndex]['en']}}
+          </view>
+        </picker>
+      </view>
+      
+			<view class="section">
+        <view class="section__title">{{multiSelector}}</view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            {{current_option}}{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+          </view>
+        </picker>
+      </view>
+      <view class="section">
+        <view class="section__title">{{time_picker}}</view>
+        <picker mode="time" value="{{time}}" start="{{timeStart}}" end="{{timeEnd}}" bindchange="bindTimeChange">
+          <view class="picker">
+            {{current_option}} {{time}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="section">
+        <view class="section__title">{{year_picker}}</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindYearDateChange" fields="year">
+          <view class="picker">
+            {{current_option}} {{yearDate}}
+          </view>
+        </picker>
+      </view>
+			<view class="section">
+        <view class="section__title">{{month_picker}}</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindMonthDateChange" fields="month">
+          <view class="picker">
+            {{current_option}} {{monthDate}}
+          </view>
+        </picker>
+      </view>
+			<view class="section">
+        <view class="section__title">{{date_picker}}</view>
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDayDateChange" fields="day">
+          <view class="picker">
+            {{current_option}} {{dayDate}}
+          </view>
+        </picker>
+      </view>
+      <view class="section">
+        <view class="section__title">{{area_picker}}</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{current_option}}{{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

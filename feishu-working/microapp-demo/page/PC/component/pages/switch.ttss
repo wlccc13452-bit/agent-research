@@ -1,0 +1,10 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 16px;
+}
+
+.switch {
+  font-size: 14px;
+  margin-right: 50px;
+}

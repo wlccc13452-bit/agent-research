@@ -1,0 +1,29 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'authorized'}}"/>
+
+  <view class="page-body">
+    <!-- <view class="page-section">
+      <view class="page-body-info">
+        <text class="page-body-text-small">DeviceId</text>
+        <text>{{deviceId}}</text>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="getDeviceId">getDeviceId</button>
+    </view> -->
+    <view class="btn-area">
+        <button type="primary" bindtap="authorize">authorize</button>
+    </view>
+     <view class="btn-area">
+        <button type="primary" bindtap="openSetting">openSetting</button>
+    </view>
+     <view class="btn-area">
+        <button type="primary" bindtap="getSetting">getSetting</button>
+    </view>
+  </view>
+  
+  <template is="foot" />
+</view>

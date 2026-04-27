@@ -1,0 +1,53 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'InnerAudioContext'}}" />
+
+	<view class="page-section">
+		<view class="page-body-info">
+			<text class="time-big">{{formatedCurrentTime}}</text>
+			<slider class="slider" min="0" max="{{duration}}" step="1" value="{{currentTime}}" bindchange="seek" bindchanging="seeking"></slider>
+			<view class="play-time">
+				<text>{{buffered_audio}} {{buffered}}</text>
+				<text>{{total_length}} {{formatedDuration}}</text>
+			</view>
+		</view>
+		<view class="page-body-buttons">
+			<block tt:if="{{playing == true}}">
+				<view class="page-body-button" bindtap="stop">
+					<image src={{stopIcon}}></image>
+				</view>
+				<view class="page-body-button" bindtap="pause">
+					<image src={{pauseIcon}}></image>
+				</view>
+			</block>
+			<block tt:if="{{playing == false}}">
+				<view class="page-body-button"></view>
+				<view class="page-body-button" bindtap="play">
+					<image src={{playIcon}}></image>
+				</view>
+			</block>
+			<view class="page-body-button"></view>
+		</view>
+	</view>
+	<view class="page-section">
+		<view class="page-section-title">{{control_parameter}}</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_switch">
+				<view class="weui-cell__bd">{{whether_to_cycle}}</view>
+				<view class="weui-cell__ft">
+					<switch bindchange="setloop" />
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_switch">
+				<view class="weui-cell__bd">{{follow_the_system_mute}}</view>
+				<view class="weui-cell__ft">
+					<switch bindchange="setmute" />
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<template is="foot" />
+</view>

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "shutdown-1773831730544",
+    "from": "team-lead",
+    "to": "激进重构代理",
+    "type": "shutdown_request",
+    "content": "{\"type\":\"shutdown_request\",\"request_id\":\"shutdown-1773831730544\",\"reason\":\"重构任务已完成，请关闭\",\"from\":\"team-lead\",\"timestamp\":\"2026-03-18T11:02:10.544Z\"}",
+    "timestamp": "2026-03-18T11:02:10.544Z",
+    "read": true
+  }
+]

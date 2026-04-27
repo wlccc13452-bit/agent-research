@@ -1,0 +1,43 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'Open Schema'}}" />
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">Docs URL</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" bindinput="docsInput" placeholder="Docs URL" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">Internal URL</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" bindinput="internalInput" placeholder="Internal URL" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">External URL</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input input-width" bindinput="externalInput" placeholder="External URL" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <button type="default" bindtap='openDocs'>Open Docs</button>
+      <button type="default" bindtap='openInternalURL'>Open Internal URL</button>
+      <button type="default" bindtap='openExternalURL'>Open External URL</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

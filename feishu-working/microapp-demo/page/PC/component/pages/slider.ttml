@@ -1,0 +1,20 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{set_step}}</view>
+      <view class="body-view">
+        <slider class="slider" value="60" bindchange="slider2change" step="5"/>
+      </view>
+  </view>
+  <view class="section">
+    <view class="title">{{show_current_value}}</view>
+      <view class="body-view">
+        <slider class="slider" value="50" bindchange="slider3change" show-value/>
+      </view>
+  </view>
+  <view class="section">
+   <view class="title">{{set_range}}</view>
+      <view class="body-view">
+        <slider class="slider" value="100" bindchange="slider4change" min="50" max="200" show-value/>
+      </view>
+  </view>
+</view>

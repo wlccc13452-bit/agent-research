@@ -1,0 +1,14 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'checkWatermark'}}" />
+
+	<view class="page-body">
+		<view class="btn-area">
+			<button type="default" bindtap='checkWatermark'>{{tip}}</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

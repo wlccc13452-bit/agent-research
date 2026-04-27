@@ -1,0 +1,11 @@
+.menuItem {
+  height: 44px;
+  line-height: 44px;
+  /* width: 300px; */
+  padding-left: 55px;
+  text-transform: capitalize;
+}
+
+.menuItem.active {
+  color: #3370ff;
+}

@@ -1,0 +1,34 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'onShareAppMessage'}}" />
+
+	<view class="page-body">
+		<view class="weui-cells__title">{{send_content}}</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<view class="weui-label">{{describe}}</view>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-input" type="text" disabled="{{true}}" value="{{shareData.desc}}"></input>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">{{share_path}}</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" disabled="{{true}}" value="{{from}}"></input>
+        </view>
+      </view>
+    </view>
+  <button bindtap="shareWebContent">{{share_web_content}}</button>
+  <!--  <view class="weui-cells__tips">{{share_to_friend}}</view>  -->
+  </view>
+  <button open-type="share">{{click_share_button}}</button>
+<!--  <button bindtap="open">{{show_top_share_button}}</button>
+  <button bindtap="hide">{{hide_top_share_button}}</button> -->
+  <template is="foot"/>
+</view>

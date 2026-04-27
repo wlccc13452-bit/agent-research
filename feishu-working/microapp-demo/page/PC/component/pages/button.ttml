@@ -1,0 +1,57 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{type}}</view>
+    <view class="btns-container">
+      <button class="btn" type="primary">{{primary_btn}}</button>
+      <button class="btn">{{secondary_btn}}</button>
+      <button class="btn" type="dashed">{{dashed_btn}}</button>
+      <button class="btn" type="warn">{{warn_btn}}</button>
+      <button class="btn" type="danger">{{danger_btn}}</button>
+      <button class="btn" type="text">{{text_btn}}</button>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{disabled_btn}}</view>
+    <view class="btns-container">
+      <button class="btn" type="primary" disabled>{{primary_btn}}</button>
+      <button class="btn" disabled>{{secondary_btn}}</button>
+      <button class="btn" type="dashed" disabled>{{dashed_btn}}</button>
+      <button class="btn" type="warn" disabled>{{warn_btn}}</button>
+      <button class="btn" type="danger" disabled>{{danger_btn}}</button>
+      <button class="btn" type="text" disabled>{{text_btn}}</button>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{size}}</view>
+    <view class="btns-container">
+      <button class="btn" type="primary" size="huge">{{huge_size}}</button>
+      <button class="btn" type="primary" size="large">{{large_size}}</button>
+      <button class="btn" type="primary">{{middle_size}}</button>
+      <button class="btn" type="primary" size="mini">{{mini_size}}</button>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{shape}}</view>
+    <view class="btns-container">
+      <button class="btn" type="primary" shape="rectangle">{{rectangle_shape}}</button>
+      <button class="btn" type="primary">{{normal_shape}}</button>
+      <button class="btn" type="primary" shape="round">{{round_shape}}</button>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{loading}}</view>
+    <view class="btns-container">
+      <button class="btn" type="primary" loading plain>{{loading}}</button>
+      <button class="btn" type="danger" loading>{{loading}}</button>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{ghost_btn}}</view>
+    <view class="btns-container plain-box">
+      <button class="btn" type="primary" plain>{{primary_btn}}</button>
+      <button class="btn" plain>{{secondary_btn}}</button>
+      <button class="btn" type="dashed" plain>{{dashed_btn}}</button>
+      <button class="btn" type="warn" plain>{{warn_btn}}</button>
+    </view>
+  </view>
+</view>

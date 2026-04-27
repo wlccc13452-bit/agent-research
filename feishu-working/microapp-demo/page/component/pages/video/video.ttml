@@ -1,0 +1,31 @@
+<scroll-view class="page-body">
+  <view class="page-body-wrapper">
+    <video 
+      id="myVideo"
+      src="https://sf3-cn.feishucdn.com/obj/open-platform-opendoc/4bc8f1f99761a8ab242a337592ff7f9f_5w2XGfMSqs.mp4"
+      title="{{title}}"
+      show-snapshot-button="{{true}}"
+      show-rate-btn="{{true}}"
+      enable-progress-gesture="{{true}}"
+      bindplay="bindPlay"
+      bindpause="bindPause"
+      binderror="bindError"
+      bindtimeupdate="bindTimeUpdate"
+      bindloadedmetadata="bindLoadedMetaData"
+    />
+    <view class="btn-area">
+      <button bindtap="play" type="primary">{{play}}</button>
+      <button bindtap="pause" type="primary">{{pause}}</button>
+      <button bindtap="stopVideo" type="primary">{{stop_video}}</button>
+      <button bindtap="enterFullScreen" type="primary">{{enter_fullscreen}}</button> 
+    </view>
+    <view class="btn-area">
+      <input type="number" class="input-bg" bindinput="getSeekPosition" placeholder="{{seek_position}}"/>
+      <button bindtap="seek" type="primary">{{seek}}</button>
+    </view>
+    <view class="btn-area">
+      <input class="input-bg" bindinput="getPlaySpeed" placeholder="{{speed}}"/>
+      <button bindtap="setPlaySpeed" type="primary">{{play_speed}}</button>
+    </view>
+  </view>
+</scroll-view>

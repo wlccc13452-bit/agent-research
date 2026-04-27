@@ -1,0 +1,14 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 16px;
+}
+
+.textarea-container {
+  width: 472px;
+  margin: 0 20px 20px 0;
+}
+
+.textarea {
+  height: 200px;
+}

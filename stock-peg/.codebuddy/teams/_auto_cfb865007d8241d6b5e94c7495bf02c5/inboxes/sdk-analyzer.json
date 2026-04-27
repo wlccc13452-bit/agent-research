@@ -1,0 +1,11 @@
+[
+  {
+    "id": "shutdown-1773880462765",
+    "from": "team-lead",
+    "to": "sdk-analyzer",
+    "type": "shutdown_request",
+    "content": "{\"type\":\"shutdown_request\",\"request_id\":\"shutdown-1773880462765\",\"reason\":\"Analysis complete. All team members have finished their work. Preparing to shutdown.\",\"from\":\"team-lead\",\"timestamp\":\"2026-03-19T00:34:22.765Z\"}",
+    "timestamp": "2026-03-19T00:34:22.765Z",
+    "read": true
+  }
+]

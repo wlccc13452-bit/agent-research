@@ -1,0 +1,73 @@
+{
+  "version": "2.5.0",
+  "lastUpdated": "2026-03-19",
+  "commands": {
+    "/harness": {
+      "type": "loader",
+      "loads": [
+        ".harness/progress.md",
+        ".harness/decisions.md",
+        ".harness/memory/core-facts.md",
+        ".harness/AGENTS.md"
+      ],
+      "description": "Load harness context (progress → decisions → core-facts → AGENTS)",
+      "last_used": "2026-03-19"
+    },
+    "/update-memory": {
+      "type": "memory-sync",
+      "primarySkill": ".harness/skills/utils/update-memory/SKILL.md",
+      "updates": [
+        ".harness/progress.md",
+        ".harness/decisions.md",
+        ".harness/memory/session-summaries/"
+      ],
+      "description": "Unified memory update - session summary, decisions tracking, intelligent compression",
+      "last_used": "2026-03-19"
+    },
+    "/maintenance": {
+      "type": "governance",
+      "primarySkill": ".harness/skills/utils/maintenance/SKILL.md",
+      "loads": [
+        ".harness/AGENTS.md",
+        ".harness/progress.md",
+        ".harness/decisions.md",
+        ".harness/skills/registry.json"
+      ],
+      "description": "System entropy reduction + integrity validation - clean, standardize, synchronize",
+      "last_used": "2026-03-19"
+    },
+    "/dispute": {
+      "type": "meta-cognition",
+      "primarySkill": ".harness/skills/utils/dispute/SKILL.md",
+      "description": "Force adversarial debate for complex decisions - multi-perspective analysis",
+      "last_used": null
+    },
+    "/daily-watchlist": {
+      "type": "feature",
+      "primarySkill": ".harness/skills/daily-watchlist/SKILL.md",
+      "description": "Generate daily stock watchlist with PEG analysis",
+      "last_used": null
+    },
+    "/api": {
+      "type": "feature",
+      "primarySkill": ".harness/skills/api-interaction/SKILL.md",
+      "description": "Interact with Stock PEG backend APIs and MCP Server tools",
+      "last_used": null
+    }
+  },
+
+  "requiredFiles": [
+    ".harness/AGENTS.md",
+    ".harness/progress.md",
+    ".harness/decisions.md",
+    ".harness/memory/core-facts.md"
+  ],
+
+  "archivedCommands": {
+    "/auto-memory-and-summary": "Merged into /update-memory (unified memory workflow)",
+    "/auto-memory-trigger": "Merged into /update-memory (built-in trigger logic)",
+    "/check-harness": "Merged into /maintenance (Phase 4 integrity validation)",
+    "/validate": "Covered by AGENTS.md Validation Gate",
+    "/python-env": "Covered by AGENTS.md Environment Lock"
+  }
+}

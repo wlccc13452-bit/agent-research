@@ -1,0 +1,17 @@
+@import "/page/PC/common/index.ttss";
+
+.canvas {
+  width: 305px;
+  height: 305px;
+  background-color:#fafbfc;
+}
+
+button {
+  /* margin-right: 10px; */
+}
+
+.btns-container {
+  width: 305px;
+  display: flex;
+  justify-content: space-between;
+}

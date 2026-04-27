@@ -1,0 +1,25 @@
+@import "/page/PC/common/index.ttss";
+
+.title {
+
+}
+
+.icon-container {
+  vertical-align: middle;
+  padding-top: 24px;
+}
+
+.icon-container .inline {
+  display: inline;
+  height: 40px;
+  line-height: 40px;
+}
+
+.icon-container.inline .icon{
+  margin-right: 25px;
+}
+
+.icon {
+  margin-right: 12px;
+  vertical-align: middle;
+}

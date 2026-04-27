@@ -1,0 +1,24 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">
+      <text>Flex-direction: row</text>
+    </view>
+    <view class="page-section-spacing">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view class="flex-item demo-text-1"></view>
+        <view class="flex-item demo-text-2"></view>
+        <view class="flex-item demo-text-3"></view>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">
+        <text>Flex-direction: column</text>
+      </view>
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V demo-text-1"></view>
+        <view class="flex-item flex-item-V demo-text-2"></view>
+        <view class="flex-item flex-item-V demo-text-3"></view>
+      </view>
+  </view>
+</view>

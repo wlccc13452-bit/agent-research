@@ -1,0 +1,24 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view>
+        <view style="text-align: center;">{{year}}-{{month}}-{{day}}</view>
+        <picker-view indicator-style="height: 50px;" mask-style="background-color: blue; z-index: 0;" style="height: 750rpx;" value="{{value}}" bindchange="bindChange">
+          <picker-view-column>
+             <view tt:for="{{years}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column style="text-align: center;">
+             <view tt:for="{{months}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column style="text-align: center;">
+            <view tt:for="{{days}}" style="line-height: 50px; text-align: center;">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

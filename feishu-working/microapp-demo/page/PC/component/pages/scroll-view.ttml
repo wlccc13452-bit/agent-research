@@ -1,0 +1,26 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">
+      <text>Vertical Scroll</text>
+    </view>
+    <view class="page-section-spacing">
+      <scroll-view scroll-y="true" style="height: 250px;">
+        <view id="demo1" class="scroll-view-item demo-text-1"></view>
+        <view id="demo2" class="scroll-view-item demo-text-2"></view>
+        <view id="demo3" class="scroll-view-item demo-text-3"></view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">
+      <text>Horizontal Scroll</text>
+    </view>
+    <view class="page-section-spacing">
+      <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+        <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+        <view id="demo2" class="scroll-view-item_H demo-text-2"></view>
+        <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

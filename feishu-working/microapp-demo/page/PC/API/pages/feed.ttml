@@ -1,0 +1,22 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">1.{{app_notify_tip}}</view>
+    <input value="{{notify_content}}" type="text" maxlength=100 bindinput="bindKeyInput"></input>
+  </view>
+  <view class="section">
+    <view class="title">2.{{select_start_page_tip}}</view>
+    <radio-group bindchange="radioChange">
+      <label class="radio" tt:for="{{items}}" :key="{{item.value}}">
+        <radio style="line-height: 1; margin-right: 4px;" value="{{item.value}}" checked="{{ item.checked }}"/>
+        {{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="title">3.{{send_notification_tip}}</view>
+    <button type="primary" bindtap="onClick">Click me</button>
+  </view>
+  <view class="section">
+    <view class="title">4.{{enter_feed_mode_tip}}</view>
+  </view>
+</view>

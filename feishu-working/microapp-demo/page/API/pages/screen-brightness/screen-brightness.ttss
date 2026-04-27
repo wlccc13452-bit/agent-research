@@ -1,0 +1,5 @@
+@import "../../../common/lib/weui.ttss";
+
+.slider {
+  width: 650rpx;
+}

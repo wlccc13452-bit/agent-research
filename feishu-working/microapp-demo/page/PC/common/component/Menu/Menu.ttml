@@ -1,0 +1,16 @@
+<view class="menu {{ hide ? 'hide' : ''}}">
+  <SubMenu tt:for="{{data}}" 
+    bindclicksubmenu="onClicksubmenu" 
+    title="{{item.title}}"
+    tt:for-index="idx0" 
+    _key="{{idx0}}" 
+    active="{{activeSubMenuIndex === idx0}}">
+    <MenuItem tt:for="{{item.list}}" 
+      bindclickitem="onClickitem"
+      tt:for-index="idx1" 
+      _key="{{idx0*10+idx1}}" 
+      active="{{activeItemIdx === idx0*10+idx1}}">
+        {{item}}
+    </MenuItem>
+  </SubMenu>
+</view>

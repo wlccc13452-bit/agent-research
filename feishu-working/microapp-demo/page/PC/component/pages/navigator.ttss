@@ -1,0 +1,8 @@
+@import "/page/PC/common/index.ttss";
+
+.navigator-hover button{
+  background-color: #DEDEDE;
+}
+.other-navigator-hover button{
+  background-color: #DEDEDE;
+}

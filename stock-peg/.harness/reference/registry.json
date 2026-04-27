@@ -1,0 +1,628 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-19",
+  "description": "Reference layer content registry with access tracking",
+  
+  "categories": {
+    "general": {
+      "description": "Universal patterns reusable in other projects",
+      "size_limit": 300,
+      "path": "general/"
+    },
+    "project-specific": {
+      "description": "Domain knowledge for this project only",
+      "size_limit": 400,
+      "path": "project-specific/"
+    },
+    "knowledge-base": {
+      "description": "Project-specific troubleshooting solutions",
+      "size_limit": 200,
+      "path": "knowledge-base/"
+    },
+    "architecture": {
+      "description": "Architecture decision records",
+      "size_limit": 200,
+      "path": "architecture/"
+    },
+    "skills": {
+      "description": "Executable workflows pending extraction",
+      "size_limit": 200,
+      "path": "skills/"
+    }
+  },
+  
+  "documents": {
+    "knowledge-base/DATABASE_ERRORS.md": {
+      "title": "Database Session Anti-Patterns",
+      "category": "knowledge-base",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 45,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 103,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["database", "async", "sqlalchemy", "session-management"],
+      "decision_link": "D034",
+      "applicable_prohibition": "AGENTS.md Prohibition #7"
+    },
+    
+    "knowledge-base/VSCODE_PYTHON_PATH.md": {
+      "title": "VSCode Python Path Issue",
+      "category": "knowledge-base",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 20,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 38,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": "2026-03-19",
+      "access_count": 1,
+      "heat_score": 1,
+      "status": "active",
+      "tags": ["vscode", "python", "configuration"]
+    },
+    
+    "knowledge-base/VERIFICATION_EVIDENCE.md": {
+      "title": "Verification Evidence Guide",
+      "category": "knowledge-base",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": false,
+        "solution_validated": true,
+        "not_in_llm_training": false
+      },
+      "lines": 76,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "process", "validation"],
+      "decision_link": "D035",
+      "applicable_prohibition": "AGENTS.md Prohibition #15",
+      "notes": "Harness Engineering process template - compressed to essential template"
+    },
+    
+    "knowledge-base/ANTI_FORGERY_VERIFICATION.md": {
+      "title": "Anti-Forgery Verification System",
+      "category": "knowledge-base",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 30,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 245,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["security", "verification", "anti-forgery", "integrity"],
+      "applicable_prohibition": "AGENTS.md Prohibition #15"
+    },
+    
+    "knowledge-base/ARCHIVES_STANDARDIZATION.md": {
+      "title": "Archives Directory Standardization",
+      "category": "knowledge-base",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 30,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 277,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "archives", "standardization", "maintenance"],
+      "decision_link": "D038",
+      "applicable_prohibition": "AGENTS.md Prohibition #12"
+    },
+    
+    "knowledge-base/REGISTRY_HEAT_TRACKING.md": {
+      "title": "Registry Heat Tracking Structure",
+      "category": "knowledge-base",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 15,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 225,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "registry", "heat-tracking", "skill-extraction"]
+    },
+    
+    "knowledge-base/SYSTEM_LOGS_MANAGEMENT.md": {
+      "title": "System Logs Management Mechanism",
+      "category": "knowledge-base",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 30,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 361,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "logs", "lifecycle", "maintenance"],
+      "decision_link": "D038"
+    },
+    
+    "knowledge-base/TESTING_COMMANDS.md": {
+      "title": "Testing Commands and Execution Patterns",
+      "category": "knowledge-base",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 30,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 290,
+      "created": "2026-03-19",
+      "last_updated": "2026-03-19",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["testing", "commands", "verification", "uv"]
+    },
+    
+    "general/async-patterns/thread-isolation-pattern.md": {
+      "title": "Thread Isolation Pattern for Async SDKs",
+      "category": "general",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 120,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 210,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["async", "event-loop", "threading", "sdk-integration"],
+      "decision_link": "D027",
+      "skill_extraction_candidate": true,
+      "extracted_skill": "skills/async-sdk-integration/SKILL.md"
+    },
+    
+    "general/database-patterns/async-sqlalchemy-2.0.md": {
+      "title": "Async SQLAlchemy 2.0 Query Pattern",
+      "category": "general",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 60,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": false
+      },
+      "lines": 236,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["database", "async", "sqlalchemy"],
+      "decision_link": "D034",
+      "notes": "May violate Quality Gate #4 - SQLAlchemy 2.0 is well-documented"
+    },
+    
+    "general/sdk-integration/module-level-caching.md": {
+      "title": "Module-Level Event Loop Caching Trap",
+      "category": "general",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 90,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 208,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["sdk", "module-caching", "python"],
+      "skill_extraction_candidate": true
+    },
+    
+    "architecture/D001-D010-tech-stack.md": {
+      "title": "Technology Stack Selection",
+      "category": "architecture",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 308,
+      "created": "2026-03-01",
+      "last_updated": "2026-03-01",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["architecture", "tech-stack", "decision-record"],
+      "decision_link": "D001-D010"
+    },
+    
+    "architecture/D022-D027-feishu-integration.md": {
+      "title": "Feishu Integration Architecture",
+      "category": "architecture",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 276,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["feishu", "architecture", "decision-record"],
+      "decision_link": "D022-D027"
+    },
+    
+    "architecture/D028-harness-knowledge-restructuring.md": {
+      "title": "Harness Knowledge Restructuring",
+      "category": "architecture",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 233,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "architecture", "decision-record"],
+      "decision_link": "D028",
+      "applicable_prohibition": "AGENTS.md Prohibition #12"
+    },
+    
+    "configuration/env-setup.md": {
+      "title": "Environment Configuration Guide",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 20,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 194,
+      "created": "2026-03-15",
+      "last_updated": "2026-03-15",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["configuration", "environment", "setup"]
+    },
+    
+    "project-specific/architecture/HARNESS_ARCHITECTURE.md": {
+      "title": "Harness System Architecture",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 216,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["harness", "architecture", "directory-structure"]
+    },
+    
+    "project-specific/environment/TROUBLESHOOTING.md": {
+      "title": "Troubleshooting Guide",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 45,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 259,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["troubleshooting", "environment", "common-issues"]
+    },
+    
+    "project-specific/feishu-integration/bot-architecture.md": {
+      "title": "Feishu Bot Integration Architecture",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 120,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 381,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["feishu", "bot", "architecture", "integration"],
+      "decision_link": "D022-D027"
+    },
+    
+    "project-specific/feishu-integration/websocket-broadcast.md": {
+      "title": "WebSocket Broadcast Implementation",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 60,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 279,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["websocket", "broadcast", "feishu", "real-time"],
+      "decision_link": "D023"
+    },
+    
+    "project-specific/standards/LANGUAGE_RULES.md": {
+      "title": "Language Rules",
+      "category": "project-specific",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 165,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["standards", "language", "documentation"],
+      "applicable_prohibition": "AGENTS.md Prohibition #16"
+    },
+    
+    "project-specific/standards/TASK_EXECUTION_STANDARDS.md": {
+      "title": "Task Execution Standards",
+      "category": "project-specific",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 289,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["standards", "task-execution", "validation"],
+      "applicable_prohibition": "AGENTS.md Prohibition #15"
+    },
+    
+    "project-specific/workflows/WORKFLOWS.md": {
+      "title": "Workflows Guide",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 377,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["workflows", "development", "testing"]
+    },
+    
+    "project-specific/api-contract.md": {
+      "title": "Cross-Stack API Contract",
+      "category": "project-specific",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 74,
+      "created": "2026-03-21",
+      "last_updated": "2026-03-21",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["contract", "api", "federation", "governance"],
+      "decision_link": "D044",
+      "applicable_prohibition": "AGENTS.md Prohibition #18"
+    },
+    
+    "project-specific/tools/mcp-setup/SKILL.md": {
+      "title": "MCP Installation Guide for Multiple IDEs",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 30,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 266,
+      "created": "2026-03-18",
+      "last_updated": "2026-03-18",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["mcp", "ide", "setup", "configuration"]
+    },
+    
+    "project-specific/data-sources/tushare-api/SKILL.md": {
+      "title": "Tushare API Complete Index",
+      "category": "project-specific",
+      "priority": "Standard",
+      "quality_gate": {
+        "debugging_time_min": 0,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": false
+      },
+      "lines": 288,
+      "size_kb": 99,
+      "created": "2026-03-01",
+      "last_updated": "2026-03-01",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["tushare", "api", "data-source", "index"],
+      "notes": "Large index document (99KB, 288 lines). Contains complete Tushare API reference table pointing to 229 Chinese documents in references/ subdirectory.",
+      "special_handling": "Index document - exempt from 200-line limit for SKILLs due to reference table format"
+    },
+    
+    "skills/async-sdk-integration/SKILL.md": {
+      "title": "Async SDK Integration SKILL",
+      "category": "skills",
+      "priority": "Critical",
+      "quality_gate": {
+        "debugging_time_min": 120,
+        "root_cause_analyzed": true,
+        "solution_validated": true,
+        "not_in_llm_training": true
+      },
+      "lines": 266,
+      "created": "2026-03-16",
+      "last_updated": "2026-03-16",
+      "last_accessed": null,
+      "access_count": 0,
+      "heat_score": 0,
+      "status": "active",
+      "tags": ["async", "sdk", "integration", "skill"],
+      "extracted_from": "general/async-patterns/thread-isolation-pattern.md"
+    }
+  },
+  
+  "statistics": {
+    "total_documents": 25,
+    "active": 25,
+    "deleted": 5,
+    "total_lines": 5708,
+    "lines_deleted": 339,
+    "reduction_percentage": 0,
+    "by_category": {
+      "knowledge-base": 8,
+      "general": 3,
+      "architecture": 3,
+      "project-specific": 9,
+      "configuration": 1,
+      "skills": 1
+    },
+    "by_priority": {
+      "critical": 10,
+      "standard": 15
+    },
+    "violations_fixed": {
+      "quality_gate": 4,
+      "empty_template": 1,
+      "generic_content": 4,
+      "missing_registry": 14,
+      "incorrect_lines": 5
+    },
+    "skill_extraction_candidates": 2,
+    "large_documents": {
+      "tushare-api/SKILL.md": {
+        "size_kb": 99,
+        "lines": 288,
+        "reason": "API index table",
+        "action": "exempt"
+      }
+    }
+  },
+  
+  "maintenance": {
+    "last_audit": "2026-03-19",
+    "next_audit": "2026-04-19",
+    "auto_compression_enabled": true,
+    "archive_after_days": 90
+  }
+}

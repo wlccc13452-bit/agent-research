@@ -1,0 +1,32 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <!-- <view class="section">
+    <view class="input-container">
+      <view>{{auto_focus_input}}</view>
+      <input auto-focus placeholder={{auto_focus_placeholder}} />
+    </view>
+  </view> -->
+  <view class="section">
+    <view class="title">{{maxlength_input}}</view>
+    <view class="input-container">
+      <input maxlength=10 placeholder={{maxlength_input_placeholder}} />
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{number_input}}</view>
+    <view class="input-container">
+      <input type="number" placeholder={{number_input_placeholder}} />
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{secret_input}}</view>
+    <view class="input-container">
+      <input password type="text" placeholder={{secret_input_placeholder}} />
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">{{realtime_input+inputValue}}</view>
+    <view class="input-container">
+      <input maxlength=20 bindinput="bindKeyInput" placeholder={{syncview_placeholder}} />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'uploadFile'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+ <button bindtap="someR" type="primary" >request</button>
+        <block tt:if="{{imageSrc}}">
+          <image src="{{imageSrc}}" class="image" mode="aspectFit"></image>
+        </block>
+
+        <block tt:else>
+          <view class="image-plus image-plus-nb" bindtap="chooseImage">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+          <view class="image-plus-text">{{select_photo}}</view>
+        </block>
+
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

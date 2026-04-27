@@ -1,0 +1,118 @@
+<view>
+    <scroll-view class="common-info-container"
+                 scroll-y>
+        <view class="common-info" tt:for="{{commonInfo}}">
+            <text>{{item}}</text>
+        </view>
+    </scroll-view>
+    <view style="display: flex">
+        <view bindtap="onClearText" class="log-btn">清空日志</view>
+        <view bindtap="onCopyLog" class="log-btn">复制日志</view>
+    </view>
+    <scroll-view scroll-y
+                 class="operation-container" style="height: {{operationContainerHeight}}rpx">
+        <view>
+            <view>NFCAdapter</view>
+            <button size="mini" type="primary" bindtap="handleGetNFCAdapter">getNFCAdapter</button>
+            <button size="mini" type="primary" bindtap="handleOnDiscovered">onDiscovered获取卡片uid</button>
+            <button size="mini" type="primary" bindtap="handleStartDiscovery">startDiscovery</button>
+            <button size="mini" type="primary" bindtap="handleOffDiscovered">offDiscovered</button>
+            <button size="mini" type="primary" bindtap="handleStopDiscovery">stopDiscovery</button>
+        </view>
+        <view>
+            <view>NFC-A
+                <text style="font-weight: lighter ; font-size: 24rpx">读写前先点击"onDiscovered获取卡片uid"</text>
+            </view>
+            <button size="mini" type="primary" bindtap="handleGetNFCATag">NFCAdapter.getNfcA</button>
+            <button size="mini" type="primary" bindtap="handleNFCAConnectOnDiscovered">onDiscovered&connect</button>
+            <button size="mini" type="primary" bindtap="handleNFCAConnect">connect</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">读指令步骤：</view>
+            <view style="font-weight: lighter ; font-size: 24rpx">1. 鉴权指令 0x60(1B, auth), block(1B, 区块), id(4B, 卡片id),
+                keyA(6B, keyA)
+            </view>
+            <view style="font-weight: lighter ; font-size: 24rpx">2. 读取指令 0x30(1B, read), block(1B, 区块)</view>
+            <view style="font-weight: lighter ; font-size: 24rpx">MIFARE-Classic需要鉴权，MIFARE-Ultralight不需要，其他MF类型未测试
+            </view>
+            <view style="font-weight: lighter ; font-size: 24rpx">以下按钮读取最多64个区块数据</view>
+            <button size="mini" type="primary" bindtap="handleNFCAReadTransceive">transceive读取数据</button>
+            <view class="input-container">
+                <input bindinput="handleInputNFCABlock" class="input-block" placeholder="区块" type="number"
+                       value="{{nfcaBlock}}"></input>
+                <input bindinput="handleInputNFCAKey" class="input-data" placeholder="16进制鉴权key如a0a1a2a3a4a5"
+                       value="{{nfcaKey}}"></input>
+            </view>
+            <button size="mini" type="primary" bindtap="handleNFCAReadOneBlock">读取单区块数据</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">写指令步骤（以Mifare-Ultralight为例）：</view>
+            <view style="font-weight: lighter ; font-size: 24rpx">1. 写命令 0xa0(1B, write), block(1B, 区块)</view>
+            <view style="font-weight: lighter ; font-size: 24rpx">2. 传数据 data(16B, data)</view>
+            <view style="font-weight: lighter ; font-size: 24rpx">务必先了解NFC卡片数据存储格式再进行写操作，一旦写废无法恢复！</view>
+            <!--            <view style="font-weight: lighter ; font-size: 24rpx">以下按钮从第5区块开始写入数据，每个字节为区块号，写成功后再读取可验证结果</view>-->
+            <!--            <button size="mini" type="primary" bindtap="handleNFCAWriteTransceive">transceive写入数据</button>-->
+            <view class="input-container">
+                <input bindinput="handleInputNFCABlock" class="input-block" placeholder="区块" type="number"
+                       value="{{nfcaBlock}}"></input>
+                <input bindinput="handleInputNFCAData" class="input-data" placeholder="16进制16字节数据如e1101200..."></input>
+            </view>
+            <button size="mini" type="primary" bindtap="handleNFCAWrite">写入单区块数据</button>
+            <button size="mini" type="primary" bindtap="NFCATagClose">close</button>
+            <button size="mini" type="primary" bindtap="handleGetNFCAMaxTransceiveLength">getMaxTransceiveLength
+            </button>
+            <button size="mini" type="primary" bindtap="handleNFCASetTimeout1">setTimeout 1ms</button>
+            <button size="mini" type="primary" bindtap="handleNFCASetTimeout9">setTimeout 9s</button>
+            <!--        <button size="mini" type="primary" bindtap="handleNFCAIsConnected">标签是否连接</button>-->
+            <button size="mini" type="primary" bindtap="handleGetAtqa">getAtqa</button>
+            <button size="mini" type="primary" bindtap="handleGetSak">getSak</button>
+        </view>
+        <view>
+            <view>MifareClassic
+                <text style="font-weight: lighter ; font-size: 24rpx">读写前先点击"onDiscovered获取卡片uid"</text>
+            </view>
+            <button size="mini" type="primary" bindtap="handleGetMCTag">NFCAdapter.getMifareClassic</button>
+            <button size="mini" type="primary" bindtap="handleMCConnectOnDiscovered">onDiscovered&connect</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">读取最多64个区块数据</view>
+            <button size="mini" type="primary" bindtap="handleMCReadTransceive">transceive读取数据</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">务必先了解NFC卡片数据存储格式再进行写操作，一旦写废无法恢复！</view>
+            <input bindinput="handleInputMFCmd" class="input-mf" placeholder="16进制裸指令如a00500000000"></input>
+            <button size="mini" type="primary" bindtap="handleMCWriteTransceive">transceive写入数据</button>
+            <button size="mini" type="primary" bindtap="MCTagClose">close</button>
+            <button size="mini" type="primary" bindtap="handleGetMCMaxTransceiveLength">getMaxTransceiveLength</button>
+            <button size="mini" type="primary" bindtap="handleMCSetTimeout1">setTimeout 1ms</button>
+            <button size="mini" type="primary" bindtap="handleMCSetTimeout9">setTimeout 9s</button>
+            <!--        <button size="mini" type="primary" bindtap="handleMCIsConnected">标签是否连接</button>-->
+        </view>
+        <view>
+            <view>NFC-V
+                <text style="font-weight: lighter ; font-size: 24rpx">读写前先点击"onDiscovered获取卡片uid"</text>
+            </view>
+            <button size="mini" type="primary" bindtap="handleGetNFCVTag">NFCAdapter.getNfcV</button>
+            <button size="mini" type="primary" bindtap="handleNFCVConnectOnDiscovered">onDiscovered&connect</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">读指令格式: 0x22(1B, flag), 0x20(1B, read), uid(8B, 卡片id),
+                block(1B, 区块)
+            </view>
+            <view style="font-weight: lighter ; font-size: 24rpx">读取第2区块数据</view>
+            <button size="mini" type="primary" bindtap="handleNFCVReadTransceive">transceive读取数据</button>
+            <view style="font-weight: lighter ; font-size: 24rpx">写指令格式: 0x22(1B, flag), 0x21(1B, write), uid(8B, 卡片id),
+                data(4B)
+            </view>
+            <view style="font-weight: lighter ; font-size: 24rpx">写入第2区块数据116, 105, 97, n(从0开始写一次自增1)</view>
+            <button size="mini" type="primary" bindtap="handleNFCVWriteTransceive">transceive写入数据</button>
+            <button size="mini" type="primary" bindtap="NFCVTagClose">close</button>
+            <button size="mini" type="primary" bindtap="handleGetNFCVMaxTransceiveLength">getMaxTransceiveLength
+            </button>
+            <!--        <button size="mini" type="primary" bindtap="handleNFCVSetTimeout1">设置超时时间1ms</button>-->
+            <!--        <button size="mini" type="primary" bindtap="handleNFCVSetTimeout9">设置超时时间9s</button>-->
+        </view>
+        <!--    <view>-->
+        <!--        <view>NDEF <text style="font-weight: lighter ; font-size: 24rpx">读写前先点击"设置贴卡监听"</text></view>-->
+        <!--        <button size="mini" type="primary" bindtap="handleGetNDEFTag">获取实例</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFConnectOnDiscovered">设置贴卡时连接标签</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFReadTransceive">读取数据</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFWriteTransceive">写入数据</button>-->
+        <!--        <button size="mini" type="primary" bindtap="NDEFTagClose">断开标签</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleGetNDEFMaxTransceiveLength">获取最大传输长度</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFSetTimeout1">设置超时时间1ms</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFSetTimeout9">设置超时时间9s</button>-->
+        <!--        <button size="mini" type="primary" bindtap="handleNDEFIsConnected">标签是否连接</button>-->
+        <!--    </view>-->
+    </scroll-view>
+</view>

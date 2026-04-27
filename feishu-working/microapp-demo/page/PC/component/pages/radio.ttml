@@ -1,0 +1,15 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{default_style}}</view>
+      <view class="radio-container">
+        <label class="radio">
+          <radio style="line-height: 1" value="r1" checked="true"/>{{selected}}
+        </label>
+      </view>
+      <view class="radio-container">
+        <label class="radio">
+          <radio style="line-height: 1" value="r2" />{{unselected}}
+        </label>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-section-title">
+    <text>{{vertical_scroll}}</text>
+  </view>
+
+  <scroll-view class="sub-container" style="height: 300rpx;"
+      scroll-y
+      scroll-with-animation
+      bindscrolltoupper="upper"
+      bindscrolltolower="lower"
+      bindscroll="scroll"
+      scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}"
+  >
+    <view id="demo1" class="scroll-view-item demo-text-1"></view>
+    <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+    <view id="demo3" class="scroll-view-item demo-text-3"></view>
+  </scroll-view>
+
+  <view class="sub-container">
+    <button bindtap="tap">Scroll into</button>
+    <button bindtap="tapMove">Move</button>
+  </view>
+
+  <view class="page-section-title">
+      <text>{{horizontal_scroll}}</text>
+  </view>
+
+  <scroll-view class="scroll-view_H sub-container" scroll-x>
+      <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+      <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+      <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+  </scroll-view>
+  <template is="foot" />
+</view>

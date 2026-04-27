@@ -1,0 +1,22 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'onNetworkStatusChange'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">{{network_status}}</view>
+        <block tt:if="{{isConnected === false}}">
+          <text class="page-body-text">{{no_internet_connection}}</text>
+        </block>
+        <block tt:if="{{isConnected === true}}">
+          <text class="page-body-text-network-type">{{networkType}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

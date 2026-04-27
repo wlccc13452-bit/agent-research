@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "byted-tma-pack": "^1.0.15",
+    "request": "^2.88.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "scripts": {}
+}

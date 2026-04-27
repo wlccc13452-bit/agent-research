@@ -1,0 +1,20 @@
+[
+  {
+    "id": "msg-1773880390352-euvdu9",
+    "from": "team-lead",
+    "to": "integration-validator",
+    "type": "message",
+    "content": "sdk-analyzer has completed SDK layer analysis. Please complete your validation so we can provide comprehensive recommendations together.",
+    "timestamp": "2026-03-19T00:33:10.352Z",
+    "read": true
+  },
+  {
+    "id": "shutdown-1773880464173",
+    "from": "team-lead",
+    "to": "integration-validator",
+    "type": "shutdown_request",
+    "content": "{\"type\":\"shutdown_request\",\"request_id\":\"shutdown-1773880464173\",\"reason\":\"Analysis complete. All team members have finished their work. Preparing to shutdown.\",\"from\":\"team-lead\",\"timestamp\":\"2026-03-19T00:34:24.173Z\"}",
+    "timestamp": "2026-03-19T00:34:24.173Z",
+    "read": true
+  }
+]

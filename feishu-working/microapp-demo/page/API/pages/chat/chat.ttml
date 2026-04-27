@@ -1,0 +1,28 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+<view class="container">
+    <template is="head" data="{{title: 'api'}}"/>
+    <view class="page-body">
+        <view class="page-section">
+            <view class="weui-cells__title">chat & profile</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <input class="weui-input input-width" bindinput="chatAndProfileInput" placeholder="openid" />
+                    <input class="weui-input input-width" bindinput="openChatIdInput" placeholder="openChatId" />
+                    <input class="weui-input input-width" bindinput="chatTypeInput" placeholder="单聊输入0 群聊输入1" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <form class="page-body">
+        <view class="btn-area">
+            <button type="primary" bindtap='chatFeishu'>chat</button>
+            <button type="primary" bindtap='profileFeishu'>profile</button>
+            <button type="primary" bindtap='botFeishu'>Bot</button>
+            <button type="primary" bindtap='getChatInfo'>getChatInfo</button>
+            <button type="primary" bindtap='onChatBadgeChange'>onChatBadgeChange</button>
+            <button type="primary" bindtap='offChatBadgeChange'>offChatBadgeChange</button>
+        </view>
+    </form>
+    <template is="foot" />
+</view>

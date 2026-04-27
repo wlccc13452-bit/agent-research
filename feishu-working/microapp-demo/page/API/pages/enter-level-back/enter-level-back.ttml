@@ -1,0 +1,32 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'Level Confirm Window'}}" />
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">onBack</view>
+        <view class="weui-cell__ft">
+          <switch bindchange="back"  />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">onClose</view>
+        <view class="weui-cell__ft">
+          <switch bindchange="close" checked />
+        </view>
+      </view>
+    </view>
+
+    <view class="btn-area">
+      <button type="primary" bindtap="enableLeaveConfirm">enableLeaveConfirm</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="disableLeaveConfirm">disableLeaveConfirm</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

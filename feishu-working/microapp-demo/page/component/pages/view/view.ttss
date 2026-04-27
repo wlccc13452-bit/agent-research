@@ -1,0 +1,21 @@
+.flex-wrp{
+  display:flex;
+}
+.flex-item{
+  width: 200rpx;
+  height: 300rpx;
+  font-size: 26rpx;
+}
+.flex-item-V{
+  margin: 0 auto;
+  width: 300rpx;
+  height: 200rpx;
+}
+
+.page-section{
+  margin-top: 40rpx;
+}
+
+.hover{
+  background-color: green;
+}

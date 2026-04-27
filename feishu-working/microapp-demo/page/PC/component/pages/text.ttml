@@ -1,0 +1,10 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+    <svg t="1569327912465" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1114" width="200" height="200"><path d="M413.294642 754.027595c-8.935049 0-17.866002-3.407729-24.682483-10.224211L125.306737 480.498987c-13.631939-13.631939-13.631939-35.734051 0-49.365991 13.631939-13.631939 35.734051-13.631939 49.365991 0l238.621914 238.621914 436.077685-436.055158c13.630916-13.630916 35.733027-13.631939 49.365991 0.001024 13.631939 13.631939 13.631939 35.734051-0.001024 49.365991l-460.760168 460.737641C431.161667 750.618842 422.226618 754.027595 413.294642 754.027595z" p-id="1115"></path></svg>
+      <text>{{text}}</text>
+    </view>
+    <button disabled="{{!canAdd}}" bindtap="add">{{add_line}}</button>
+    <button disabled="{{!canRemove}}" bindtap="remove">{{delete_line}}</button>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'DeviceCredential'}}"/>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <button type="default" bindtap="startDeviceCredential">{{open_system_authentication}}</button>
+      <button type="default" bindtap="acquireFaceImage">{{acquire_face_image}}</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

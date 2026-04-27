@@ -1,0 +1,113 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'saveFile'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <block tt:if="{{tempFilePath != ''}}">
+          <image src="{{tempFilePath}}" class="image" mode="aspectFit"></image>
+        </block>
+        <block tt:if="{{tempFilePath === '' && savedFilePath != ''}}">
+          <image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
+        </block>
+        <block tt:if="{{tempFilePath === '' && savedFilePath === ''}}">
+          <view class="image-plus image-plus-nb" bindtap="chooseImage">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+          <view class="image-plus-text">{{select_a_file}}</view>
+        </block>
+      </view>
+      <view tt:for="{{savedFileList}}">
+        <text>{{item.filePath}}</text>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="saveFile">{{save_file}}</button>
+        <button type="primary" bindtap="saveFileSync">{{save_file_sync}}</button>
+        <button bindtap="clear">{{delete_file}}</button>
+        <button bindtap="unlink">{{unlink_file}}</button>
+        <button bindtap="unlinkSync">{{unlink_file_sync}}</button>
+        <block>
+          <button bindtap="unzipFile">{{unzip_file}}</button>
+          <view class='sub_case' tt:if="{{testCaseItemVisibleList['unzipFile']}}">
+            <view>
+              <textarea class="btn-area" type="text" placeholder="请输入本地文件路径（待解压）" bindinput="inputFilePathForUnzip"/>
+            </view>
+            <button class='sub_btn' bindtap="unzip">Unzip</button>
+          </view>
+        </block>
+        <block>
+          <button bindtap="openDocument">{{open_file}}</button>
+          <view class='sub_case' tt:if="{{testCaseItemVisibleList['openDocument']}}">
+            <view>
+              <textarea class="btn-area" type="text" placeholder="请输入本地文档路径（可从downloadFile处获取）" bindinput="inputDocFilePath"/>
+            </view>
+            <view>
+              <label>文件类型</label>
+              <radio-group bindchange="fileTypeChange">
+                <label class="fileType-item" wx:for="{{fileTypes}}" wx:key="{{item.value}}">
+                  {{item.value}}：<radio value="{{item.value}}" checked="{{item.checked}}"/>
+                </label>
+              </radio-group>
+            </view>
+            <view>
+                <label>是否显示右上角更多菜单:</label>
+                <switch checked="{{showMenu}}" bindchange="switchShowMenu"/>
+            </view>
+            <button class='sub_btn' bindtap="open">打开文档</button>
+          </view>
+        </block>
+        <button bindtap="accessFile">{{check_file}}</button>
+        <button bindtap="accessFileSync">{{check_file_sync}}</button>
+        <button bindtap="copyFile">{{copy_file}}</button>
+        <button bindtap="copyFileSync">{{copy_file_sync}}</button>
+        <button bindtap="getFileInfo">{{get_file_info}}</button>
+        <button bindtap="getSavedFileList">{{get_saved_file_list}}</button>
+        <button bindtap="mkDir">{{mk_dir}}</button>
+        <button bindtap="mkdirSync">{{mk_dir_sync}}</button>
+        
+        <block>
+          <button bindtap="removeSavedFile">{{remove_saved_file}}</button>
+          <view class='sub_case' tt:if="{{testCaseItemVisibleList['removeSavedFile']}}">
+            <view>
+              <textarea class="btn-area" type="text" placeholder="请输入本地文件路径（待删除）" bindinput="inputFilePathForRemove"/>
+            </view>
+            <button class='sub_btn' bindtap="remove">Remove</button>
+          </view>
+        </block>
+        <button bindtap="rename">{{rename}}</button>
+        <button bindtap="renameSync">{{rename_sync}}</button>
+        <button bindtap="rmDir">{{rm_dir}}</button>
+        <button bindtap="rmDirSync">{{rm_dir_sync}}</button>
+        <button bindtap="readDir">{{read_dir}}</button>
+        <button bindtap="readDirSync">{{read_dir_sync}}</button>
+        <button bindtap="readFile">{{read_file}}</button>
+        <button bindtap="readFileSync">{{read_file_sync}}</button>
+        <button bindtap="stat">{{get_stat}}</button>
+        <button bindtap="statSync">{{get_stat_sync}}</button>
+        <button bindtap="writeFile">{{write_file}}</button>
+        <button bindtap="writeFileSync">{{write_file_sync}}</button>
+      </view>
+    </view>
+    <view class="split"></view>
+    <view class="page-section">
+      <view class="btn-area">
+        <button bindtap="docsPickerLark">{{select_docs_lark}}</button>
+        <button bindtap="filePickerLark">{{select_attachment_lark}}</button>
+        <button bindtap="filePickerSystem">{{select_attachment_system}}</button>
+      </view>
+      <view>{{attachment_list}}</view>
+      <view tt:for="{{fileList}}">
+        <text>{{item.name}}</text>
+        <text>{{item.fileName}}</text>
+      </view>
+
+  </view>
+
+  <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>
+
+  <template is="foot" />
+</view>

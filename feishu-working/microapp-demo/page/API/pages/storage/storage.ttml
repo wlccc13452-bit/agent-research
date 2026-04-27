@@ -1,0 +1,43 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'get/set/clearStorage'}}" />
+
+	<view class="page-body">
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__hd">
+						<view class="weui-label">key</view>
+					</view>
+					<view class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder={{enter_key_placeholder}} name="key" value="{{key}}" bindinput="keyChange"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">value</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder={{enter_value_placeholder}} name="data" value="{{data}}" bindinput="dataChange"></input>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="setStorage">{{store_data}}</button>
+        <button bindtap="getStorage">{{get_data}}</button>
+        <button bindtap="removeStorage">{{clear_data}}</button>
+        <button bindtap="clearStorage">{{clear_all_data}}</button>
+         <button bindtap="getStorageInfo">{{get_cached_data}}</button>
+        <button bindtap="getStorageInfoSync">{{sync_get_cached_data}}</button>
+      </view>
+    </view>
+    		<view class="text-box" scroll-y="true" >
+        <text>{{keysStr}}</text>
+      </view>
+
+  </view>
+
+  <template is="foot" />
+</view>

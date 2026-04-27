@@ -1,0 +1,20 @@
+[
+  {
+    "id": "msg-1773908452925-mzn0re",
+    "from": "team-lead",
+    "to": "feishu-bot-migrator",
+    "type": "message",
+    "content": "请报告当前迁移进度：\n1. 已读取的目标文件\n2. 发现的数据库操作\n3. 需要创建的新 operations 函数\n4. 已完成的修改",
+    "timestamp": "2026-03-19T08:20:52.925Z",
+    "read": true
+  },
+  {
+    "id": "msg-1773908474595-8ur1xk",
+    "from": "db-ops-explorer",
+    "to": "feishu-bot-migrator",
+    "type": "message",
+    "content": "已补充缺失的 operations 函数 `get_watchlist_by_stock()`:\n\n**新增函数 (watchlist_ops.py):**\n```python\nasync def get_watchlist_by_stock(\n    db: AsyncSession,\n    stock_code: str,\n    stock_name: Optional[str] = None\n) -> List[DailyWatchlist]:\n    \"\"\"根据股票代码查询关注列表\"\"\"\n```\n\n**位置:** \n- `backend/database/operations/watchlist_ops.py` (新增函数)\n- `backend/database/operations/__init__.py` (已导出)\n\n**用途:** \n支持 feishu_bot 模块的 `_delete_from_watchlist()` 操作，根据股票代码和名称查询关注列表记录，然后批量删除。\n\n**参数说明:**\n- `stock_code`: 必需，股票代码\n- `stock_name`: 可选，股票名称（用于进一步筛选）\n\n**返回值:**\n匹配的关注列表记录列表\n\n现在 operations 层函数已完备，可以继续迁移工作。",
+    "timestamp": "2026-03-19T08:21:14.595Z",
+    "read": true
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "_auto_215c2b7317094be1b4fe07a385b34c99",
+  "leadAgentId": "215c2b7317094be1b4fe07a385b34c99",
+  "workspacePath": "d:\\2026projects\\stocks-research\\stock-peg",
+  "createdAt": "2026-03-22T06:18:25.490Z",
+  "options": {
+    "workspacePath": "d:\\2026projects\\stocks-research\\stock-peg",
+    "isAutoTeam": true
+  },
+  "members": [
+    {
+      "memberId": "team-lead@_auto_215c2b7317094be1b4fe07a385b34c99",
+      "name": "team-lead",
+      "role": "Team Lead - coordinates the team and interacts with the user"
+    },
+    {
+      "memberId": "ak-impl@_auto_215c2b7317094be1b4fe07a385b34c99",
+      "name": "ak-impl",
+      "role": "增强akshare_source覆盖全部ak API"
+    },
+    {
+      "memberId": "ts-impl@_auto_215c2b7317094be1b4fe07a385b34c99",
+      "name": "ts-impl",
+      "role": "增强tushare_source覆盖财务API"
+    },
+    {
+      "memberId": "news-tencent-impl@_auto_215c2b7317094be1b4fe07a385b34c99",
+      "name": "news-tencent-impl",
+      "role": "创建新闻数据源和增强腾讯数据源"
+    }
+  ],
+  "isAutoTeam": true
+}

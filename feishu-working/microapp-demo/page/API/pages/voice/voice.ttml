@@ -1,0 +1,69 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'start/stopRecord、play/stopVoice'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <block tt:if="{{recording === false && playing === false && hasRecord === false}}">
+        <view class="page-body-time">
+          <text class="time-big">{{formatedRecordTime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="startRecord">
+            <image src={{recordIcon}}></image>
+          </view>
+          <view class="page-body-button"></view>
+        </view>
+      </block>
+
+      <block tt:if="{{recording === true}}">
+        <view class="page-body-time">
+          <text class="time-big">{{formatedRecordTime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="stopRecord">
+            <view class="button-stop-record"></view>
+          </view>
+          <view class="page-body-button"></view>
+        </view>
+      </block>
+
+      <block tt:if="{{hasRecord === true && playing === false}}">
+        <view class="page-body-time">
+          <text class="time-big">{{formatedPlayTime}}</text>
+          <text class="time-small">{{formatedRecordTime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button"></view>
+          <view class="page-body-button" bindtap="playVoice">
+            <image src={{playIcon}}></image>
+          </view>
+          <view class="page-body-button" bindtap="clear">
+            <image src={{trashIcon}}></image>
+          </view>
+        </view>
+      </block>
+
+      <block tt:if="{{hasRecord === true && playing === true}}">
+        <view class="page-body-time">
+          <text class="time-big">{{formatedPlayTime}}</text>
+          <text class="time-small">{{formatedRecordTime}}</text>
+        </view>
+        <view class="page-body-buttons">
+          <view class="page-body-button" bindtap="stopVoice">
+            <image src={{stopIcon}}></image>
+          </view>
+          <view class="page-body-button" bindtap="clear">
+            <image src={{trashIcon}}></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

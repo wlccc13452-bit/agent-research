@@ -1,0 +1,68 @@
+# API Call Validation Rule
+
+## Purpose
+Ensure all API calls use correct endpoints from SKILL.md documentation.
+
+## Trigger
+When making ANY HTTP request to backend API.
+
+## Mandatory Steps
+
+### Step 1: Source Endpoint from Documentation
+- Read the SKILL.md file for the relevant feature
+- Locate the "API Endpoints" table
+- Copy the EXACT endpoint path
+
+### Step 2: Verify Before Execution
+Before calling the API, verify in your response:
+```
+[Pre-call verification]
+Endpoint: {exact_endpoint_from_skill_md}
+Source: {skill_md_file_path}
+```
+
+### Step 3: Execute with Verification
+```
+curl {base_url}{endpoint}
+```
+
+## Prohibitions
+
+- ❌ NEVER type endpoints from memory
+- ❌ NEVER assume endpoint structure
+- ❌ NEVER use partial endpoint paths
+- ❌ NEVER skip the verification step
+
+## Example
+
+### Correct Process:
+```
+1. Read: skills/indicators/force-index/SKILL.md line 54
+2. Found: `/api/indicators/force-index/{code_or_name}`
+3. Verify: [Pre-call verification]
+   Endpoint: /api/indicators/force-index/601898
+   Source: skills/indicators/force-index/SKILL.md
+4. Execute: curl http://localhost:8000/api/indicators/force-index/601898
+```
+
+### Incorrect Process:
+```
+❌ Execute: curl http://localhost:8000/api/force-index/601898
+Reason: Typed from memory, missing /indicators/ prefix
+```
+
+## Validation Checklist
+
+Before each API call, ask yourself:
+- [ ] Did I read the SKILL.md file?
+- [ ] Did I locate the exact endpoint in the documentation?
+- [ ] Did I copy the endpoint verbatim?
+- [ ] Did I verify the endpoint structure?
+
+## Scope
+This rule applies to ALL API calls in this project, including but not limited to:
+- Stock data APIs
+- Force Index APIs
+- Fundamental analysis APIs
+- WebSocket endpoints
+- Configuration APIs

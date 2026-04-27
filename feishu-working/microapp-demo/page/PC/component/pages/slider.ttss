@@ -1,0 +1,13 @@
+@import "/page/PC/common/index.ttss";
+
+.section {
+  margin-bottom: 39px;
+}
+
+.section .title {
+  margin-bottom: 22px;
+}
+
+.slider {
+  margin: 0;
+}

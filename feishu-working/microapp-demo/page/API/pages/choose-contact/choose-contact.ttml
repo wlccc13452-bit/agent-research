@@ -1,0 +1,45 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'chooseContact'}}" />
+
+	<view class="page-body">
+		<view class="btn-area">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{is_multi}}</view>
+          <view class="weui-cell__ft">
+            <switch checked bindchange="switchMulti"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{is_ignore}}</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="switchIgnore"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{display_back}}</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="switchDisplayBack"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{external_contact}}</view>
+          <view class="weui-cell__ft">
+            <switch checked bindchange="switchExternalContact"/>
+          </view>
+        </view>
+      </view>
+			<button type="default" bindtap='chooseContact'>{{choose_contact}}</button>
+    </view>
+  </view>
+  <view>
+    <view tt:for="{{contacts}}">
+      <text>{{name+item.name}}</text>
+      <text>openid：{{item.openId}}</text>
+    </view>
+  </view>
+  <template is="foot" />
+</view>

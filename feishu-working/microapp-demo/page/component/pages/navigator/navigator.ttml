@@ -1,0 +1,16 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="btn-area">
+      <navigator url="navigate?title=navigate" hover-class="navigator-hover">
+        <button type="default">{{open_in_new_page}}</button>
+      </navigator>
+      <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">
+        <button type="default">{{open_in_current_page}}</button>
+      </navigator>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

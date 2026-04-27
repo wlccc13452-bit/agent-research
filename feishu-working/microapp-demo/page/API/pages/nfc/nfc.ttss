@@ -1,0 +1,62 @@
+.log-btn {
+    margin: 5rpx;
+    height: 50rpx;
+    width: 200rpx;
+    font-size: 24rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border: black solid 1rpx;
+    border-radius: 5rpx;
+}
+
+button {
+    margin: 5rpx;
+}
+
+.clipboard {
+    font-size: 18rpx;
+    word-wrap: break-word;
+}
+
+body {
+}
+
+.common-info-container {
+    background-color: #333333;
+    height: 400rpx;
+}
+
+.common-info {
+    color: #ffffff;
+    font-size: 24rpx;
+    word-wrap: break-word;
+}
+
+.operation-container {
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-block {
+    width: 10%;
+    height: 48rpx;
+    line-height: 48rpx;
+    font-size: 32rpx;
+    border: solid 1rpx #000;
+}
+.input-data {
+    width: 90%;
+    height: 48rpx;
+    line-height: 48rpx;
+    font-size: 32rpx;
+    border: solid 1rpx #000;
+}
+.input-mf {
+    width: 100%;
+    height: 48rpx;
+    line-height: 48rpx;
+    font-size: 32rpx;
+    border: solid 1rpx #000;
+}

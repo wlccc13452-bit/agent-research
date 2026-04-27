@@ -1,0 +1,26 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'onCompassChange'}}"/>
+
+  <view class="page-body">
+    <view class="page-section page-section_center">
+      <text class="page-body-text">{{tip}}</text>
+      <view class="direction">
+        <view class="bg-compass-line"></view>
+        <image class="bg-compass" src="compass.png" style="transform: rotate({{direction}}deg)"></image>
+        <view class="direction-value">
+          <text>{{direction}}</text>
+          <text class="direction-degree">0</text>
+        </view>
+      </view>
+      <view class="controls">
+        <button bindtap="startCompass" disabled="{{enabled}}">{{start_listening}}</button>
+        <button bindtap="stopCompass" disabled="{{!enabled}}">{{stop_listening}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

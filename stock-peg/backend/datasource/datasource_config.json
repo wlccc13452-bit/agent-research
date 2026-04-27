@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "last_check_time": null,
+  "disabled_sources": [],
+  "source_usage": {
+    "tushare": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "akshare": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "tencent": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "eastmoney": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "sina": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "yfinance": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "alpha_vantage": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "finnhub": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    },
+    "local_db": {
+      "last_used": null,
+      "total_calls": 0,
+      "success_rate": 0.0,
+      "enabled": true
+    }
+  },
+  "settings": {
+    "inactivity_threshold_days": 7,
+    "auto_disable_inactive": true,
+    "min_calls_before_disable": 0
+  }
+}

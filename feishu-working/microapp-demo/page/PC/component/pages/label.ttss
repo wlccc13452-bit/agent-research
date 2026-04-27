@@ -1,0 +1,25 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.label-1, .label-2{
+  margin-bottom: 18px;
+}
+.label-3-text{
+  color: #3370ff;
+  font-size: 14px;
+}
+
+.checkbox-container {
+  margin-bottom: 15px;
+}
+
+.checkbox-3{
+  
+}

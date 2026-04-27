@@ -1,0 +1,30 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'chooseLocation'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <text class="page-body-text-small">{{current_location}}</text>
+        <block tt:if="{{hasLocation === false}}">
+          <text class="page-body-text">{{not_select_a_location}}</text>
+        </block>
+        <block tt:if="{{hasLocation === true}}">
+          <text class="page-body-text">{{locationAddress}}</text>
+          <view class="page-body-text-location">
+            <text>E: {{location.longitude[0]}}°{{location.longitude[1]}}′</text>
+            <text>N: {{location.latitude[0]}}°{{location.latitude[1]}}′</text>
+          </view>
+        </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="chooseLocation">{{selecte_a_location}}</button>
+        <button bindtap="clear">{{clear}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

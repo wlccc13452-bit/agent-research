@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>前端连接测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .test-item { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .success { border-left: 4px solid #4caf50; }
+        .error { border-left: 4px solid #f44336; }
+        .pending { border-left: 4px solid #ff9800; }
+        h2 { margin-top: 0; }
+        pre { background: #f9f9f9; padding: 10px; overflow-x: auto; font-size: 12px; }
+        button { background: #2196f3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 14px; }
+        button:hover { background: #1976d2; }
+    </style>
+</head>
+<body>
+    <h1>🔍 前端连接诊断工具</h1>
+    <button onclick="runAllTests()">开始测试</button>
+    <div id="results"></div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000';
+        let results = [];
+
+        async function testAPI(name, url, timeout = 3000) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-item pending';
+            resultDiv.innerHTML = `<h2>${name}</h2><p>请求中...</p>`;
+            document.getElementById('results').appendChild(resultDiv);
+
+            const startTime = Date.now();
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+                const response = await fetch(url, {
+                    signal: controller.signal,
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                clearTimeout(timeoutId);
+
+                const elapsed = Date.now() - startTime;
+                const data = await response.json();
+
+                resultDiv.className = 'test-item success';
+                resultDiv.innerHTML = `
+                    <h2>${name}</h2>
+                    <p><strong>状态:</strong> ${response.status} OK</p>
+                    <p><strong>耗时:</strong> ${elapsed}ms</p>
+                    <p><strong>URL:</strong> ${url}</p>
+                    <details>
+                        <summary>响应数据</summary>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </details>
+                `;
+                return { success: true, elapsed, data };
+            } catch (error) {
+                const elapsed = Date.now() - startTime;
+                resultDiv.className = 'test-item error';
+                resultDiv.innerHTML = `
+                    <h2>${name}</h2>
+                    <p><strong>错误:</strong> ${error.message}</p>
+                    <p><strong>耗时:</strong> ${elapsed}ms</p>
+                    <p><strong>URL:</strong> ${url}</p>
+                `;
+                return { success: false, error: error.message, elapsed };
+            }
+        }
+
+        async function runAllTests() {
+            document.getElementById('results').innerHTML = '';
+            
+            await testAPI('1️⃣ 后端健康检查', `${API_BASE_URL}/health`);
+            await testAPI('2️⃣ 自持股票 API', `${API_BASE_URL}/api/holdings/`);
+            await testAPI('3️⃣ 热点关注 API', `${API_BASE_URL}/api/daily-watchlist/summary?limit=10`);
+            await testAPI('4️⃣ 指数行情 API', `${API_BASE_URL}/api/stocks/indices/quotes`);
+        }
+    </script>
+</body>
+</html>

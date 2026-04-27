@@ -1,0 +1,9 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 16px;
+}
+
+.radio {
+  margin-right: 6px;
+}

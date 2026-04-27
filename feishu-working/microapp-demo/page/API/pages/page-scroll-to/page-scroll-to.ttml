@@ -1,0 +1,17 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'pageScrollTo'}}" />
+
+	<view class="page-body">
+		<view class="page-section">
+
+			<button bindtap="scrollto">locate</button>      
+      <text>line\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\n</text>
+    </view>
+  </view>
+
+
+  <template is="foot" />
+</view>

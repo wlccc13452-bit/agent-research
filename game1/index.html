@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333;
+            font-family: Arial, sans-serif;
+        }
+        
+        .game-container {
+            text-align: center;
+        }
+        
+        canvas {
+            border: 2px solid #fff;
+            background-color: #111;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .score {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .game-over {
+            color: #ff6b6b;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        
+        .controls {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="score">Score: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="gameOver" class="game-over" style="display: none;">Game Over! Press SPACE to restart</div>
+        <div class="controls">Use arrow keys to control the snake</div>
+    </div>
+    
+    <script src="snake.js"></script>
+</body>
+</html>

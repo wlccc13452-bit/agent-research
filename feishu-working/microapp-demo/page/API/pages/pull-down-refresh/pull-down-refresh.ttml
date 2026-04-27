@@ -1,0 +1,23 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'on/start/stopPullDownRefresh'}}" />
+
+	<view class="page-body">
+		<view class="page-section">
+			<view class="page-body-info">
+				<text class="page-body-text">{{pull_down}}</text>
+			</view>
+			<view class="btn-area">
+				<button bindtap="startPullDownRefresh">{{start_refresh}}</button>
+        <button bindtap="stopPullDownRefresh">{{stop_refresh}}</button>
+				<button bindtap="enablePullDownRefresh">{{enable_refresh}}</button>
+				<button bindtap="disablePullDownRefresh">{{disable_refresh}}</button>
+      </view>
+
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

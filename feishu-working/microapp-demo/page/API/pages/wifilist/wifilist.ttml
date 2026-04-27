@@ -1,0 +1,26 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'WifiList Api'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info" style="height: 300rpx;">
+        <view class="page-body-title">WifiStatus: {{wifiStatus}}</view>
+         <scroll-view scroll-y="true" style="height: 300rpx;" >
+           <view wx:for="{{wifiList}}">
+              {{index}}: {{item.BSSID}}, {{item.SSID}}, {{item.secure}}, {{item.signalStrength}}
+            </view>
+         </scroll-view>
+      </view>
+      <view style="height: 50rpx;"/>
+      <view class="btn-area">
+        <button type="primary" bindtap="listen">{{listenlabel}}</button>
+        <button type="primary" bindtap="getWifiList">获取Wifi列表</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

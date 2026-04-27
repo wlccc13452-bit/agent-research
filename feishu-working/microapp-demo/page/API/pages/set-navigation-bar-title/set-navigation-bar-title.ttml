@@ -1,0 +1,24 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'setNaivgationBarTitle'}}"/>
+
+  <form class="page-body" bindsubmit="setNaivgationBarTitle">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">{{page_title}}</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder={{enter_title}} name="title"></input>
+        </view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button type="primary" formType="submit">{{set}}</button>
+    </view>
+  </form>
+
+  <template is="foot" />
+</view>

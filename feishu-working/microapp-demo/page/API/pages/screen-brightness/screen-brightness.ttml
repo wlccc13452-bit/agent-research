@@ -1,0 +1,22 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'screen brightness'}}"/>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <button type="default" bindtap="light">{{!cl ? constantly_bright : light_out}}</button>
+    </view>
+
+    <view class="btn-area">
+      <button type="default" bindtap="getScreenBrightness">{{get_screen_brightness}}</button>
+    </view>
+    
+    <view class="page-body-info">
+      <view>{{set_screen_brightness}}</view>
+      <slider class="slider" bindchange="setScreenBrightness" value="{{screenBrightness}}" min="0" max="1" step="0.1"/>
+    </view>
+  </view>
+  <template is="foot" />
+</view>

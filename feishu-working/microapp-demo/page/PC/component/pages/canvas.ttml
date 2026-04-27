@@ -1,0 +1,10 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <canvas canvas-id="canvas" class="canvas"></canvas>
+    <view class="btns-container">
+      <button bindtap="startDraw">{{start_draw}}</button>
+      <button bindtap="endDraw">{{end_draw}}</button>
+      <button bindtap="exportImage">{{generate_img}}</button>
+    </view>
+  </view>
+</view>

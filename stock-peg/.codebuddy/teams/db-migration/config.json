@@ -1,0 +1,48 @@
+{
+  "name": "db-migration",
+  "leadAgentId": "96b3b27bbc2a4be89da7fbbe7013dda4",
+  "workspacePath": "d:/play-ground/股票研究/stock-peg",
+  "createdAt": "2026-03-19T08:18:09.640Z",
+  "options": {
+    "workspacePath": "d:/play-ground/股票研究/stock-peg",
+    "isAutoTeam": false
+  },
+  "members": [
+    {
+      "memberId": "team-lead@db-migration",
+      "name": "team-lead",
+      "role": "Team Lead - coordinates the team and interacts with the user"
+    },
+    {
+      "memberId": "db-ops-explorer@db-migration",
+      "name": "db-ops-explorer",
+      "role": "扫描数据库操作层结构"
+    },
+    {
+      "memberId": "feishu-bot-migrator@db-migration",
+      "name": "feishu-bot-migrator",
+      "role": "迁移feishu_bot数据库调用"
+    },
+    {
+      "memberId": "data-services-migrator@db-migration",
+      "name": "data-services-migrator",
+      "role": "迁移data-services数据库调用"
+    },
+    {
+      "memberId": "alert-services-migrator@db-migration",
+      "name": "alert-services-migrator",
+      "role": "迁移alert-services数据库调用"
+    },
+    {
+      "memberId": "analytics-migrator@db-migration",
+      "name": "analytics-migrator",
+      "role": "迁移analytics-services数据库调用"
+    },
+    {
+      "memberId": "cache-services-migrator@db-migration",
+      "name": "cache-services-migrator",
+      "role": "迁移cache-services数据库调用"
+    }
+  ],
+  "isAutoTeam": false
+}

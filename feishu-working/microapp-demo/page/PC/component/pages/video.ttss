@@ -1,0 +1,6 @@
+@import "/page/PC/common/index.ttss";
+
+video {
+  height: 288px;
+  width: 384px;
+}

@@ -1,0 +1,13 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'share menu'}}"/>
+
+  <view class="page-body">
+    <button type="primry" bindtap="showShareMenu">showShareMenu</button>
+    <button type="primry" bindtap="hideShareMenu">hideShareMenu</button>
+  </view>
+
+  <template is="foot" />
+</view>

@@ -1,0 +1,28 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'createAnimation'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+
+      <view class="animation-element-wrapper">
+        <view class="animation-element" animation="{{animation}}"></view>
+      </view>
+      <scroll-view class="animation-buttons" scroll-y="true">
+        <button class="animation-button" bindtap="rotate">{{rotate}}</button>
+        <button class="animation-button" bindtap="scale">{{scale}}</button>
+        <button class="animation-button" bindtap="translate">{{translate}}</button>
+        <button class="animation-button" bindtap="skew">{{skew}}</button>
+        <button class="animation-button" bindtap="rotateAndScale">{{rotate_and_scale}}</button>
+        <button class="animation-button" bindtap="rotateThenScale">{{rotate_then_scale}}</button>
+        <button class="animation-button" bindtap="all">{{all}}</button>
+        <button class="animation-button" bindtap="allInQueue">{{all_in_queue}}</button>
+        <button class="animation-button animation-button-reset" bindtap="reset">{{reset}}</button>
+      </scroll-view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

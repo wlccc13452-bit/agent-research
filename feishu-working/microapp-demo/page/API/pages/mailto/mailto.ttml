@@ -1,0 +1,13 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'send email'}}"/>
+
+  <form class="page-body">
+    <view class="btn-area">
+      <button type="primary" bindtap='mailto'>{{send_email}}</button>
+    </view>
+  </form>
+  <template is="foot" />
+</view>

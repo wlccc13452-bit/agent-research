@@ -1,0 +1,13 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{default_style}}</view>
+    <view>
+      <label class="switch">
+        <switch bindchange="switch2Change"/>Off
+      </label>
+      <label class="switch">
+        <switch checked bindchange="switch1Change"/>On
+      </label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getNetworkType'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">{{network_status}}</view>
+        <block tt:if="{{hasNetworkType === false}}">
+          <text class="page-body-text">{{not_acquired}}</text>
+          <text class="page-body-text">{{click_red_button}}</text>
+        </block>
+        <block tt:if="{{hasNetworkType === true}}">
+          <text class="page-body-text-network-type">{{networkType}}</text>
+        </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="getNetworkType">{{get_network_type}}</button>
+        <button bindtap="clear">{{reset}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

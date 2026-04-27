@@ -1,0 +1,53 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" bindchange="currentChange"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block tt:for="{{background}}" tt:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{indicator}}</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{auto_play}}</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{vertical_direction}}</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{vertical}}" bindchange="changeVertical" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>{{change_duration}}</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" bindchanging="durationChanging" value="{{duration}}" min="500" max="2000"/>
+      <view class="page-section-title">
+        <text>{{gap_duration}}</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" bindchanging="intervalChanging" value="{{interval}}" min="2000" max="10000"/>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

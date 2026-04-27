@@ -1,0 +1,19 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view id="the-id-container" class="container">
+  <template is="head" data="{{title: 'createSelectorQuery'}}"/>
+
+  <view id="the-id"  style="background-color: yellow; height: 300rpx; text-align: center; line-height: 300rpx;">#the-id</view>
+  <view id="the-id1" class="class-name" style="background-color: red; height: 300rpx; text-align: center; line-height: 300rpx;">#the-id1;.class-name</view>
+  <view id="the-id2" class="class-name" style="background-color: green; height: 300rpx; text-align: center; line-height: 300rpx;">#the-id2;.class-name</view>
+  <view id="the-id3" style="background-color: pink; height: 300rpx; text-align: center; line-height: 300rpx;">#the-id3</view>
+
+  <view id="the-id-btn-area" class="btn-area">
+    <button type="primary" bindtap="exec">exec(the-id)</button>
+    <button bindtap="getRect">getRect(#the-id1)</button>
+    <button type="primary" bindtap="getAllRects">getAllRects(.class-name)</button>
+    <button bindtap="getScrollOffset">getScrollOffset</button>
+    <button type="primary" bindtap="getFields">getFields</button>
+  </view>
+</view>

@@ -1,0 +1,99 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'saveImage/Video、downloadFile'}}" />
+
+	<view class="page-body">
+		<view class="progress-box">
+			<progress percent={{imageProgress}} stroke-width="3" />
+		</view>
+
+		<image tt:if="{{imageSrc}}" src="{{imageSrc}}" mode="center" />
+
+		<view class="progress-box">
+			<progress percent={{videoProgress}} activeColor="#10AEFF" stroke-width="3" />
+		</view>
+		<view class="video-wrapper">
+			<video tt:if="{{videoSrc}}" src="{{videoSrc}}"></video>
+		</view>
+		<view class="btn-area">
+			<button bindtap="downloadImage" type="primary">{{download_image}}</button>
+      <button bindtap="saveImageToPhotosAlbum" type="default">{{save_image}}</button>
+
+      <button bindtap="downloadVideo" type="primary">{{download_video}}</button>
+      <button bindtap="saveVideoToPhotosAlbum" type="default">{{save_video}}</button>
+    </view>
+
+    <view class="download">
+      <view class="io_area">
+        <text class="io_title">选择预置URL:</text>
+        <picker bindchange="pickUrl" value="{{idxUrl}}" range="{{rgUrls}}">
+          <text class="io_content">{{rgUrls[idxUrl]}}</text>
+        </picker>
+        <text class="io_title">自定义输入URL:</text>
+        <textarea class="io_content" type="text" placeholder="请输入url" bindinput="inputUrl" value="{{sdUrl}}"></textarea>
+      </view>
+      <view class="io_area">
+        <text class="io_title">选择预置Method:</text>
+        <picker bindchange="pickMethod" value="{{idxMethod}}" range="{{rgMethods}}">
+          <text class="io_content">{{rgMethods[idxMethod]}}</text>
+        </picker>
+        <text class="io_title">自定义输入Method:</text>
+        <textarea class="io_content" type="text" placeholder="请输入method" bindinput="inputMethod" value="{{sdMethod}}"></textarea>
+      </view>
+      <view class="io_area">
+        <text class="io_title">选择预置Header:</text>
+        <picker bindchange="pickHeader" value="{{idxHeader}}" range="{{rgHeaders}}">
+          <text class="io_content">{{rgHeaders[idxHeader]}}</text>
+        </picker>
+        <text class="io_title">自定义输入Header:</text>
+        <textarea class="io_content" type="text" placeholder="请输入header" bindinput="inputHeader" value="{{sdHeader}}"></textarea>
+      </view>
+      <view class='io_area'>
+        <textarea class="io_content" type="text" placeholder="请输入data(字符串)" bindinput="inputData"/>
+      </view>
+      <button bindtap="startDownload" type="default">开始下载</button>
+
+      <view class="btn-area">下载结果Path：
+        <textarea type="text" value="{{downloadedPath}}"/>
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+    </view>
+  </view>
+  <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+      <view class="btn-area">
+      </view>
+
+  <template is="foot" />
+</view>

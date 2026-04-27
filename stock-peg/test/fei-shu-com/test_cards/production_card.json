@@ -1,0 +1,86 @@
+{
+  "schema": "2.0",
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "🔍 个股深度研究"
+    }
+  },
+  "body": {
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**请输入您想研究的股票：**\n支持股票代码（如 `600519`）或名称（如 `贵州茅台`）"
+        }
+      },
+      {
+        "tag": "input",
+        "name": "stock_input_value",
+        "placeholder": {
+          "tag": "plain_text",
+          "content": "在此输入股票代码/名称..."
+        },
+        "label": {
+          "tag": "plain_text",
+          "content": "股票代码/名称"
+        }
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "✓ 确认查询"
+            },
+            "type": "primary",
+            "value": {
+              "action": "query_stock_from_input"
+            }
+          },
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "取消"
+            },
+            "type": "default",
+            "value": {
+              "action": "cancel_query"
+            }
+          },
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "查看详细网页版"
+            },
+            "type": "default",
+            "multi_url": {
+              "url": "http://172.16.105.145:5173/feishu",
+              "android_url": "http://172.16.105.145:5173/feishu",
+              "ios_url": "http://172.16.105.145:5173/feishu",
+              "pc_url": "http://172.16.105.145:5173/feishu"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "💡 提示：输入后点击「确认查询」按钮开始分析"
+          }
+        ]
+      }
+    ]
+  }
+}

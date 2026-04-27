@@ -1,0 +1,9 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <video id="myVideo"
+        src="http://sf1-ttcdn-tos.pstatp.com/obj/ttfe/tma/test.mp4" 
+        binderror="videoErrorCallback"
+        controls>
+    </video>
+  </view>
+</view>

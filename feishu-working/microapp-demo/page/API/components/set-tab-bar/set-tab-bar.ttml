@@ -1,0 +1,63 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'tabBar'}}"/>
+
+  <view class="page-body">
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">Animation</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="switchAnimation" checked/>
+          </view>
+        </view>
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__hd">
+						<view class="weui-label">Tab index</view>
+					</view>
+					<view class="weui-cell__bd">
+						<input class="weui-input" type="number" name="key" value="{{tabIndex}}" bindinput="tabIndexChange"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">Tab title</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" name="data" value="{{tabTitle}}" bindinput="tabTitleChange"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">Badge text</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" name="data" value="{{badgeText}}" bindinput="badgeTextChange"></input>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="navigateBack">{{back}}</button>
+        <button bindtap="hideTabBar">hideTabBar</button>
+        <button bindtap="showTabBar">showTabBar</button>
+        <button bindtap="setTabBarItem1">setTabBarItem1</button>
+        <button bindtap="setTabBarItem2">setTabBarItem2</button>
+        <button bindtap="setTabBarStyle1">setTabBarStyle1</button>
+        <button bindtap="setTabBarStyle2">setTabBarStyle2</button>
+        <button bindtap="showTabBarRedDot">showTabBarRedDot</button>
+        <button bindtap="hideTabBarRedDot">hideTabBarRedDot</button>
+        <button bindtap="setTabBarBadge">setTabBarBadge</button>
+        <button bindtap="removeTabBarBadge">removeTabBarBadge</button>
+        <button bindtap="removeTabBarItem">removeTabBarItem</button>
+      </view>
+      </view>
+    		<view class="text-box" scroll-y="true" >
+        <text>{{keysStr}}</text>
+      </view>
+
+  </view>
+
+  <template is="foot" />
+</view>

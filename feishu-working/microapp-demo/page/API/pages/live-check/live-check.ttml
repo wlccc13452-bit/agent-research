@@ -1,0 +1,21 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'liveCheck'}}" />
+
+	<view class="page-section">
+		<view class="page-section-title">输入上传基准图后返回的uid</view>
+		<view class="page-section-title input_cell">
+			<input bindinput="uidInput" class="weui-input" placeholder="点击输入"/>
+		</view>
+	</view>
+
+	<view class="page-body">
+		<view class="btn-area">
+			<button type="default" bindtap='startFaceVerify'>无缘比对</button>
+	  </view>
+  </view>
+
+  <template is="foot" />
+</view>

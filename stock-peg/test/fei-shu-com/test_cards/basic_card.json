@@ -1,0 +1,53 @@
+{
+  "schema": "2.0",
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "🧪 Schema 2.0 基础测试"
+    }
+  },
+  "body": {
+    "elements": [
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**测试说明:**\n✓ Schema 2.0 结构验证\n✓ Input 组件渲染测试\n✓ 按钮交互测试"
+        }
+      },
+      {
+        "tag": "input",
+        "name": "test_input",
+        "required": true,
+        "placeholder": {
+          "tag": "plain_text",
+          "content": "输入测试内容..."
+        },
+        "label": {
+          "tag": "plain_text",
+          "content": "测试输入框"
+        }
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "✓ 提交"
+            },
+            "type": "primary",
+            "value": {
+              "action": "submit"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

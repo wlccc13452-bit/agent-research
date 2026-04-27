@@ -1,0 +1,28 @@
+.background {
+  background-color: #FFFFFF;
+  margin-bottom: 40rpx;
+}
+
+.title-text {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.icon-line {
+  display: flex;
+  padding: 24rpx 10rpx;
+}
+
+.icon-single-wrapper {
+  margin-left: 20rpx;
+  width: 50%;
+}
+
+.icon-wrapper {
+  float: left;
+  margin: 10rpx 20rpx;
+}
+
+.icon-size {
+  text-align: center;
+}

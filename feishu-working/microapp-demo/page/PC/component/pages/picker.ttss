@@ -1,0 +1,13 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 12px;
+}
+
+.picker {
+  /* width: 200px; */
+}
+
+.picker-triger {
+  display: inline-block;
+}

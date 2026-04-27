@@ -1,0 +1,5 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <rich-text nodes="{{nodes}}"></rich-text>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<import src="../../../common/foot.ttml"/>
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">{{local_image}}</view>
+      <view class="page-section-ctn">
+        <image style="width:240px; height: 240px;" src="../../resources/logo.svg" mode="bottom right"/>
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">{{net_image}}</view>
+      <view class="page-section-ctn">
+        <image style="width:240px; height: 180px;" class="image" src={{netImageUrl}} />
+      </view>
+    </view>
+  </view>
+
+  <template is="foot"/>
+</view>

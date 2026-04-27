@@ -1,0 +1,30 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getConnectedWifi'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">{{network_status}}</view>
+        <block tt:if="{{hasGetWifi === false}}">
+          <text class="page-body-text">{{not_acquired}}</text>
+          <text class="page-body-text">{{click_red_button}}</text>
+        </block>
+        <block tt:if="{{hasGetWifi === true}}">
+          <text class="page-body-text">{{wifiStr.SSID}}</text>
+          <text class="page-body-text">{{wifiStr.BSSID}}</text>
+          <text class="page-body-text">{{wifiStr.secure}}</text>
+          <text class="page-body-text">{{wifiStr.signalStrength}}</text>
+     
+        </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="getConnectedWifi">{{get_current_wifi}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

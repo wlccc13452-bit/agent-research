@@ -1,0 +1,60 @@
+{
+	"description": "project configuration file.",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "cli_9dff7f6ae02ad104",
+	"projectname": "Mini Program Demo",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "Payment",
+					"pathName": "page/API/pages/hackathon-payment/hackathon-payment",
+					"query": "",
+					"scene": null,
+					"referrerInfo": {}
+				},
+				{
+					"id": 1,
+					"name": "Share",
+					"pathName": "page/API/pages/share/share",
+					"query": "",
+					"scene": null,
+					"referrerInfo": {}
+				},
+				{
+					"id": 2,
+					"name": "蓝牙低功耗",
+					"pathName": "page/API/pages/bluetooth/bluetooth",
+					"query": "",
+					"scene": "1001",
+					"referrerInfo": {
+						"appId": "",
+						"extraData": ""
+					}
+				}
+			]
+		}
+	}
+}

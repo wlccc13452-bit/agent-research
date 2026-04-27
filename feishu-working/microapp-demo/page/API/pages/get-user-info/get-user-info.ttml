@@ -1,0 +1,73 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getUserInfo'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">{{user_info}}</view>
+        <block tt:if="{{hasUserInfo == false}}">
+          <text class="page-body-text">{{not_acquired}}</text>
+          <text class="page-body-text">{{click_red_button}}</text>
+        </block>
+        <block tt:if="{{hasUserInfo == true}}">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+					<text class="userinfo-nickname">{{ userInfo.gender }} {{userInfo.city || '--city'}}/{{userInfo.province || '--province'}}/{{userInfo.country || '--country'}}</text>
+        </block>
+      </view>
+    </view>
+		<view class="page-section">
+      <view class="page-section-title">{{unencrypted_data}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">rawData</view>
+          <view class="weui-cell__ft">
+            <text>{{rawData}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+		<view class="page-section">
+      <view class="page-section-title">{{encrypted_data}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">signature</view>
+          <view class="weui-cell__ft">
+            <text>{{signature}}</text>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">encryptedData</view>
+          <view class="weui-cell__ft">
+            <text>{{encryptedData}}</text>
+          </view>
+        </view>
+				<view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">iv</view>
+          <view class="weui-cell__ft">
+            <text>{{iv}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+		<view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{whether_encrypted}}</view>
+          <view class="weui-cell__ft">
+            <switch value="{{withCredentials}}" bindchange="changeCrendentials"/>
+          </view>
+        </view>
+			</view>
+			<view class="btn-area">
+				<button type="warn" bindtap="getUserInfo">{{get_user_info}}</button>
+				<button bindtap="clear">{{clear}}</button>
+			</view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

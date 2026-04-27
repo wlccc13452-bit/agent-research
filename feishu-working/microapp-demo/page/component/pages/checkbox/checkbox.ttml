@@ -1,0 +1,32 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">{{default_style}}</view>
+      <label class="checkbox">
+        <checkbox value="cb" checked="true"/>{{selected}}
+      </label>
+      <label class="checkbox">
+        <checkbox value="cb" />{{unselected}}
+      </label>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">{{recommend_display_style}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" tt:for="{{items}}" tt:key="{{item.value}}">
+            <view class="weui-cell__hd">
+              <checkbox value="{{item.value}}"
+                checked="{{item.checked}}"/>
+            </view>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

@@ -1,0 +1,13 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 18px;
+}
+
+.radio {
+  font-size: 14px;
+}
+
+.radio-container {
+  margin-bottom: 18px;
+}

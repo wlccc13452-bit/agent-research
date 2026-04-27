@@ -1,0 +1,19 @@
+{
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "market": "sh",
+      "full_code": "sh000001",
+      "description": "上海证券交易所综合股价指数"
+    },
+    {
+      "code": "399001",
+      "name": "深证指数",
+      "market": "sz",
+      "full_code": "sz399001",
+      "description": "深圳证券交易所成份股价指数"
+    }
+  ],
+  "last_updated": null
+}

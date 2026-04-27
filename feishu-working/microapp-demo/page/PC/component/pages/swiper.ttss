@@ -1,0 +1,6 @@
+@import "/page/PC/common/index.ttss";
+
+.swiper-item{
+  display: block;
+  height: 150px;
+}

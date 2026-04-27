@@ -1,0 +1,14 @@
+@import "/page/PC/common/index.ttss";
+
+.section .title {
+  margin-bottom: 16px;
+}
+
+.page-section-ctn {
+  text-align: center;
+}
+
+.image {
+  width: 384px;
+  height: 288px;
+}

@@ -1,0 +1,19 @@
+.chat_btn-area{
+    margin-top: 0rpx;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30rpx;
+}
+
+.input_cell {
+    background-color: #FFFFFF;
+    height: 50rpx;
+}
+.show_result{
+    width: 100%;
+}
+
+.show_result_margin{
+    width: 100%;
+    margin-bottom: 20rpx;
+}

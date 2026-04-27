@@ -1,0 +1,32 @@
+{
+    "navigationBarTitleText": "Component Sample",
+    "usingComponents": {
+        "Menu": "/page/PC/common/component/Menu/Menu",
+        "Content": "/page/PC/common/component/Content/Content",
+        "pButton": "./pages/button",
+        "pIcon": "./pages/icon",
+        "pText": "./pages/text",
+        "pRichtext": "./pages/richtext",
+        "pProgress": "./pages/progress",
+        "pView": "./pages/view",
+        "pScrollView": "./pages/scroll-view",
+        "pSwiper": "./pages/swiper",
+        "pCheckbox": "./pages/checkbox",
+        "pForm": "./pages/form",
+        "pInput": "./pages/input",
+        "pLabel": "./pages/label",
+        "pRadio": "./pages/radio",
+        "pPicker": "./pages/picker",
+        "pPickerView": "./pages/picker-view",
+        "pSlider": "./pages/slider",
+        "pSwitch": "./pages/switch",
+        "pTextarea": "./pages/textarea",
+        "pNavigator": "./pages/navigator",
+        "pImage": "./pages/image",
+        "pVideo": "./pages/video",
+        "pCanvas": "./pages/canvas",
+        "pWebView": "./pages/web-view",
+
+        "pFeed": "../API/pages/feed"
+    }
+}

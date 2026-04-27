@@ -1,0 +1,283 @@
+{
+  "stock_code": "600219",
+  "stock_name": "南山铝业",
+  "collection_time": "2026-03-10T07:51:38.650304",
+  "kline_data": [
+    {
+      "date": "2026-02-02",
+      "open": 6.61,
+      "close": 6.65,
+      "high": 7.13,
+      "low": 6.61,
+      "volume": 7729618.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-03",
+      "open": 6.81,
+      "close": 6.83,
+      "high": 6.92,
+      "low": 6.65,
+      "volume": 4886230.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-04",
+      "open": 6.94,
+      "close": 6.89,
+      "high": 7.0,
+      "low": 6.76,
+      "volume": 3198880.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-05",
+      "open": 6.77,
+      "close": 6.6,
+      "high": 6.84,
+      "low": 6.45,
+      "volume": 3264412.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-06",
+      "open": 6.29,
+      "close": 6.74,
+      "high": 6.9,
+      "low": 6.29,
+      "volume": 3410553.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-09",
+      "open": 6.9,
+      "close": 6.85,
+      "high": 6.94,
+      "low": 6.76,
+      "volume": 2052481.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-10",
+      "open": 6.86,
+      "close": 6.87,
+      "high": 6.93,
+      "low": 6.79,
+      "volume": 2033453.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-11",
+      "open": 6.85,
+      "close": 6.96,
+      "high": 7.09,
+      "low": 6.81,
+      "volume": 2476382.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-12",
+      "open": 6.96,
+      "close": 6.91,
+      "high": 7.03,
+      "low": 6.9,
+      "volume": 1975989.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-13",
+      "open": 6.8,
+      "close": 6.7,
+      "high": 6.88,
+      "low": 6.66,
+      "volume": 2114247.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-24",
+      "open": 6.86,
+      "close": 6.81,
+      "high": 6.93,
+      "low": 6.78,
+      "volume": 1997300.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-25",
+      "open": 6.83,
+      "close": 7.05,
+      "high": 7.12,
+      "low": 6.81,
+      "volume": 2875005.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-26",
+      "open": 7.16,
+      "close": 7.03,
+      "high": 7.18,
+      "low": 7.0,
+      "volume": 2046486.0,
+      "amount": null
+    },
+    {
+      "date": "2026-02-27",
+      "open": 6.99,
+      "close": 7.08,
+      "high": 7.21,
+      "low": 6.95,
+      "volume": 2587146.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-02",
+      "open": 7.08,
+      "close": 7.41,
+      "high": 7.44,
+      "low": 7.01,
+      "volume": 3879419.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-03",
+      "open": 7.33,
+      "close": 7.2,
+      "high": 7.59,
+      "low": 7.16,
+      "volume": 4154734.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-04",
+      "open": 7.18,
+      "close": 7.76,
+      "high": 7.85,
+      "low": 7.18,
+      "volume": 5560152.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-05",
+      "open": 8.0,
+      "close": 7.76,
+      "high": 8.0,
+      "low": 7.71,
+      "volume": 4298856.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-06",
+      "open": 7.58,
+      "close": 7.44,
+      "high": 7.67,
+      "low": 7.25,
+      "volume": 3128140.0,
+      "amount": null
+    },
+    {
+      "date": "2026-03-09",
+      "open": 7.61,
+      "close": 7.45,
+      "high": 7.7,
+      "low": 7.35,
+      "volume": 3292197.0,
+      "amount": null
+    }
+  ],
+  "technical_indicators": {
+    "ma5": 7.522,
+    "ma10": 7.2989999999999995,
+    "ma20": 7.0495,
+    "ma30": null,
+    "ma60": null,
+    "ma120": null,
+    "ema20": null,
+    "ema60": null,
+    "ema120": null,
+    "macd": 0.29912906659664973,
+    "macd_signal": 0.28915135636599665,
+    "macd_hist": 0.01995542046130616,
+    "rsi": 63.51351351351354,
+    "kdj_k": 53.781512605042046,
+    "kdj_d": 53.781512605042046,
+    "kdj_j": 53.78151260504204
+  },
+  "indices": {
+    "上证指数": {
+      "code": "000001",
+      "price": 10.76,
+      "change_pct": -0.55
+    },
+    "深证指数": {
+      "code": "399001",
+      "price": 14067.5,
+      "change_pct": -0.74
+    }
+  },
+  "fundamental": {
+    "stock_code": "600219",
+    "valuation": {
+      "pe_ttm": 4.585260956957941,
+      "pe_lyr": 4.585260956957941,
+      "pe_ratio": 4.585260956957941,
+      "pb": 1.415970307640194,
+      "pb_ratio": 1.415970307640194,
+      "ps_ttm": 0.812469170604352,
+      "ps_ratio": 0.812469170604352,
+      "peg": null,
+      "peg_ratio": null,
+      "market_cap": 85553576614.55,
+      "circulation_market_cap": 85553576614.55,
+      "valuation_level": "合理",
+      "score": 3.5
+    },
+    "growth": {
+      "revenue_cagr_3y": 0.021778476743241182,
+      "revenue_growth": 0.021778476743241182,
+      "revenue_cagr_5y": null,
+      "profit_cagr_3y": -0.1862863243600631,
+      "profit_growth": -0.1862863243600631,
+      "profit_cagr_5y": null,
+      "roe": 0.09858085278870724,
+      "roa": 0.08126538873732767,
+      "gross_margin": 0.2718460225499952,
+      "net_margin": 0.17792121054844345,
+      "growth_level": "低速增长",
+      "score": 2.5
+    },
+    "financial_health": {
+      "debt_ratio": 0.1756473347668495,
+      "current_ratio": 3.3813212063154734,
+      "operating_cashflow": 6220591766.67,
+      "cash_flow": 6220591766.67,
+      "ocf_to_profit": 1.3335754125344232,
+      "altman_z_score": 5.560494888166025,
+      "financial_health_level": "优秀",
+      "score": 5.0
+    },
+    "market_trend": {
+      "price_percentile_3y": null,
+      "adx": null,
+      "volatility_30d": null,
+      "trend_direction": null,
+      "ma_status": null,
+      "score": 3.0
+    },
+    "overall_score": 3.5,
+    "timestamp": "2026-03-10 07:51:55.036964"
+  },
+  "news": [
+    {
+      "title": "1天赚近两个亿，“宁王”盈利创新高！A股首批2025年年度报告出炉",
+      "source": "新浪财经",
+      "date": "",
+      "url": "https://finance.sina.com.cn/stock/2026-03-10/doc-inhqmysw6466133.shtml"
+    },
+    {
+      "title": "原油期货下跌 因出现有望缓解供应压力的事态发展",
+      "source": "新浪财经",
+      "date": "",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-03-10/doc-inhqmyta0278174.shtml"
+    }
+  ]
+}

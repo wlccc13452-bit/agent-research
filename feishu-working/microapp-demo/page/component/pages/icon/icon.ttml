@@ -1,0 +1,29 @@
+<import src="../../../common/foot.ttml"/>
+
+<view class="container">
+  <text class="title-text">{{i18nText.default_style}}</text>
+  <view class="background" >
+    <view class="icon-line" tt:for="{{icons}}" tt:for-item="iconline">
+      <view class="ttui-flex__item icon-single-wrapper" tt:for="{{iconline}}" tt:for-item="icon">
+        <label>
+          <icon type="{{icon}}"></icon>
+          {{icon}}
+        </label>
+      </view>
+    </view>
+  </view>
+  <text class="title-text">{{i18nText.title_size}}</text>
+  <view class="background icon-line">
+    <view class="icon-wrapper" tt:for="{{sizes}}">
+      <icon color="#50ABF9" size="{{item}}" type="success"></icon>
+      <view class="icon-size">{{item}}</view>
+    </view>
+  </view>
+  <text class="title-text">{{i18nText.title_color}}</text>
+  <view class="icon-line background">
+    <view class="icon-wrapper" tt:for="{{colors}}">
+      <icon size="36" color="{{item}}" type="success"></icon>
+    </view>
+  <view>
+  <template is="foot" />
+</view>

@@ -1,0 +1,6 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="btn-area">
+    <button type="primry" bindtap="checkSession">checkSession</button>
+</view>

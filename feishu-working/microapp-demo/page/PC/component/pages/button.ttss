@@ -1,0 +1,39 @@
+@import "/page/PC/common/index.ttss";
+
+.section {
+  margin-bottom: 8px;
+}
+
+.section > .title {
+  margin-bottom: 18px;
+}
+
+button {
+  margin: 0 24px 24px 0;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+.btns-container {
+  display: inline-block;
+  padding: 0 18px 18px 0px;
+}
+
+.btn {
+  margin: 0 24px 24px 0;
+}
+
+.plain-box {
+  padding: 18px 0 0 18px;
+  background-color: #bbbfc4; 
+}
+
+.plain-box .btn{
+  margin: 0 18px 18px 0;
+}
+
+
+
+

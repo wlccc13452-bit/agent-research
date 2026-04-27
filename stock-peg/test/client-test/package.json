@@ -1,0 +1,23 @@
+{
+  "name": "kline-fast-load-test",
+  "version": "1.0.0",
+  "description": "测试客户端快速加载K线数据",
+  "main": "test_kline_fast_load.ts",
+  "scripts": {
+    "test": "ts-node test_kline_fast_load.ts",
+    "test:custom": "ts-node test_kline_fast_load.ts --base=http://localhost:8000"
+  },
+  "keywords": [
+    "kline",
+    "test",
+    "fast-load",
+    "local-data"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

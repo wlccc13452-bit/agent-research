@@ -1,0 +1,51 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'openLocation'}}"/>
+  <view class="page-body">
+    <view class="page-section">
+      <form bindsubmit="openLocation">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">{{longitude}}</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="text" disabled="{{true}}"  value="114.410324" name="longitude"></input>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">{{latitude}}</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="text" disabled="{{true}}"  value="30.492121" name="latitude"></input>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">{{location_name}}</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="text" disabled="{{true}}"  value="保利国际中心" name="name"></input>
+            </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">{{detailed_location}}</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" type="text" disabled="{{true}}"  value="武汉市洪山区关山大道" name="address"></input>
+            </view>
+          </view>
+        </view>
+        <view class="btn-area">
+          <button type="primary" formType="submit">{{view_location}}</button>
+        </view>
+      </form>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "msg-1773853412274-oow2lf",
+    "from": "team-lead",
+    "to": "sdk-researcher",
+    "type": "message",
+    "content": "SDK研究员，请注意：\n1. FeishuCardService 应该是一个薄包装层，主要职责是调用飞书 API\n2. 使用 lark_oapi.api.im.v1 的 CreateMessageRequest 发送消息\n3. 需要处理异步调用，参考 long_connection_service 的 _safe_async_call\n4. 卡片构建器通过注入的 _card_builders 字典访问\n5. 添加适当的错误处理和日志记录",
+    "timestamp": "2026-03-18T17:03:32.274Z",
+    "read": true
+  },
+  {
+    "id": "msg-1773853457143-y1bag4",
+    "from": "team-lead",
+    "to": "@team",
+    "type": "broadcast",
+    "content": "团队成员请注意！\n\n我已完成架构研究和准备工作。关键发现：\n\n**SDK层实现要点**：\n- 参考 `feishu_sdk/core/client.py` 中的 `FeishuClient.send_card()` 方法\n- 使用 `lark_oapi.api.im.v1.CreateMessageRequest` 发送消息\n- 使用 `asyncio.to_thread()` 包装同步 SDK 调用\n- 返回 tuple[bool, Optional[str]] (success, message_id)\n\n**应用层实现要点**：\n- CardService 应该持有 `FeishuCardService` 的引用\n- `send_main_menu_card(chat_id)` 实现：\n  1. 使用 `MenuCardBuilder().build(card_type=\"main_menu\")` 构建卡片\n  2. 调用 `self._sdk_card_service.send_card(chat_id, card_content)`\n  \n**依赖注入要点**：\n- 应用层 CardService 需要 setter 方法接收 SDK 层服务\n- 注入顺序：先创建所有服务，再注入依赖\n\n请各位专家按照这些指导继续工作！",
+    "timestamp": "2026-03-18T17:04:17.143Z",
+    "read": true
+  },
+  {
+    "id": "shutdown-1773853605376",
+    "from": "team-lead",
+    "to": "sdk-researcher",
+    "type": "shutdown_request",
+    "content": "{\"type\":\"shutdown_request\",\"request_id\":\"shutdown-1773853605376\",\"reason\":\"工作已完成，SDK层的FeishuCardService已成功实现\",\"from\":\"team-lead\",\"timestamp\":\"2026-03-18T17:06:45.376Z\"}",
+    "timestamp": "2026-03-18T17:06:45.376Z",
+    "read": true
+  }
+]

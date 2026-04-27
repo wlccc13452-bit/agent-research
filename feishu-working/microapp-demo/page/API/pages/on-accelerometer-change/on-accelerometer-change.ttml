@@ -1,0 +1,26 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'onAccelerometerChange'}}"/>
+
+  <view class="page-body">
+    <view class="page-section page-section_center">
+      <text class="page-body-text">{{tip}}</text>
+      <view class="page-body-canvas">
+        <canvas class="page-body-ball" show="{{true}}" canvas-id="big-ball"></canvas>
+        <canvas class="page-body-ball" show="{{true}}" canvas-id="small-ball"></canvas>
+      </view>
+      <view class="page-body-xyz">
+        <text class="page-body-title">X: {{x}}</text>
+        <text class="page-body-title">Y: {{y}}</text>
+        <text class="page-body-title">Z: {{z}}</text>
+      </view>
+    </view>
+ <button class="page-body-button" type="primary" bindtap="startAccele">startAccelerometer</button>
+ <button class="page-body-button" type="primary" bindtap="stopAccele">stopAccelerometer</button>
+    
+  </view>
+
+  <template is="foot" />
+</view>

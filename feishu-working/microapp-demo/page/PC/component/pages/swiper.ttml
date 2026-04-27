@@ -1,0 +1,11 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block tt:for="{{background}}" tt:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

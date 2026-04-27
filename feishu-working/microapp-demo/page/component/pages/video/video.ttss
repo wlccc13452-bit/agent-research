@@ -1,0 +1,4 @@
+.input-bg {
+  border: 2rpx solid lightgray;
+  background-color: white;
+}

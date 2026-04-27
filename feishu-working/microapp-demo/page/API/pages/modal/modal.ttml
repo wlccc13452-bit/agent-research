@@ -1,0 +1,15 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'showModal'}}"/>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <button type="default" bindtap="modalTap">{{modal_with_title}}</button>
+      <button type="default" bindtap="noTitlemodalTap">{{modal_without_title}}</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

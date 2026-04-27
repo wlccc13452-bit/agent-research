@@ -1,0 +1,17 @@
+function Load-Env {
+    if (Test-Path .env) {
+        Get-Content .env | ForEach-Object {
+            # 忽略注释和空行
+            if ($_ -match '^[^#].*?=.*$') {
+                $name, $value = $_.Split('=', 2)
+                $name = $name.Trim()
+                $value = $value.Trim().Trim('"').Trim("'")
+                [Environment]::SetEnvironmentVariable($name, $value, "Process")
+                Write-Host "✅ Loaded: $name" -ForegroundColor Cyan
+            }
+        }
+    } else {
+        Write-Warning ".env file not found in current directory."
+    }
+}
+

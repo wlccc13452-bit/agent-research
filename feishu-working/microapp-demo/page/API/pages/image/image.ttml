@@ -1,0 +1,121 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+	<template is="head" data="{{title: 'choose/previewImage'}}" />
+	<view class="page-body">
+		<form>
+			<view class="page-section">
+				<view class="page-section-title">
+					<text>saveImageToPhotosAlbum\nreference page/API/pages/download-file</text>
+				</view>
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell weui-cell_input">
+						<view class="weui-cell__hd">
+							<view class="weui-label">{{image_source}}</view>
+						</view>
+						<view class="weui-cell__bd">
+							<picker range="{{sourceType}}" bindchange="sourceTypeChange" value="{{sourceTypeIndex}}"
+								mode="selector">
+								<view class="weui-input">{{sourceType[sourceTypeIndex]}}</view>
+							</picker>
+						</view>
+					</view>
+					<view class="weui-cell weui-cell_input">
+						<view class="weui-cell__hd">
+							<view class="weui-label">{{quantity_limit}}</view>
+						</view>
+						<view class="weui-cell__bd">
+							<picker range="{{count}}" bindchange="countChange" value="{{countIndex}}" mode="selector">
+								<view class="weui-input">{{count[countIndex]}}</view>
+							</picker>
+						</view>
+					</view>
+				</view>
+				<view class="weui-cells">
+					<view class="weui-cell">
+						<view class="weui-cell__bd">
+							<view class="weui-uploader">
+								<view class="weui-uploader__hd">
+									<view class="weui-uploader__title">{{preview_image}}</view>
+									<view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+								</view>
+								<view class="weui-uploader__bd">
+									<view class="weui-uploader__files">
+										<block tt:for="{{imageList}}" tt:for-item="image">
+											<view class="weui-uploader__file">
+												<image class="weui-uploader__img" src="{{image}}" data-src="{{image}}"
+													bindtap="previewImage"></image>
+											</view>
+										</block>
+									</view>
+									<view class="weui-uploader__input-box">
+										<view class="weui-uploader__input" bindtap="chooseImage"></view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="split"></view>
+				<view class="page-section-title">
+					<text>compressImage</text>
+				</view>
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell">
+						<view class="weui-cell__bd">
+							<view class="weui-uploader">
+								<view class="weui-uploader__hd">
+									<view class="weui-uploader__title">{{choose_compress_image}}</view>
+								</view>
+								<view class="weui-uploader__bd">
+									<view class="weui-uploader__files" tt:if="{{compressImageSrc}}">
+										<view class="weui-uploader__file weui-uploader__hd">
+											<image class="weui-uploader__img" src="{{compressImageSrc}}"
+												data-src="{{compressImageSrc}}" bindtap="previewImage2"></image>
+											<image tt:if="{{compressedImageSrc}}" class="weui-uploader__img"
+												src="{{compressedImageSrc}}" data-src="{{compressedImageSrc}}"
+												bindtap="previewImage2"></image>
+										</view>
+									</view>
+									<view tt:else class="weui-uploader__input-box">
+										<view class="weui-uploader__input" bindtap="chooseCompressImage"></view>
+									</view>
+								</view>
+							</view>
+							<button bindtap="compressImage">{{compress_quality}}</button>
+						</view>
+					</view>
+				</view>
+				<view class="split"></view>
+				<view class="page-section-title">
+					<text>getImageInfo</text>
+				</view>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_switch">
+							<view class="weui-cell__bd">width</view>
+							<view class="weui-cell__ft">
+								<text>{{imageWidth}}</text>
+							</view>
+						</view>
+						<view class="weui-cell weui-cell_switch">
+							<view class="weui-cell__bd">height</view>
+							<view class="weui-cell__ft">
+								<text>{{imageHeight}}</text>
+							</view>
+						</view>
+						<view class="weui-cell weui-cell_switch">
+							<view class="weui-cell__bd">path</view>
+							<view class="weui-cell__ft">
+								<text>{{imagePath}}</text>
+							</view>
+						</view>
+						<button bindtap="getimageinfo">{{get_image_info}}</button>
+					</view>
+				</view>
+			</view>
+		</form>
+	</view>
+	<template is="foot" />
+</view>

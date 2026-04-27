@@ -1,0 +1,33 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="btn-area" id="buttonContainer">
+      <button type="primary">{{main_operation_normal}}</button>
+      <button type="primary" loading="true">{{main_operation_loading}}</button>
+      <button type="primary" disabled="true">{{main_operation_disabled}}</button>
+
+      <button type="default">{{secondary_operation_normal}}</button>
+      <button type="default" loading>{{secondary_operation_loading}}</button>
+      <button type="default" disabled="true">{{secondary_operation_disabled}}</button>
+
+      <button type="warn">{{warning_operation_normal}}</button>
+      <button type="warn" loading>{{warning_operation_loading}}</button>
+      <button type="warn" disabled="true">{{warning_operation_disabled}}</button>
+
+      <view class="button-sp-area">
+        <button type="primary" plain="true">{{button}}</button>
+        <button type="primary" disabled="true" plain="true">{{disabled_button}}</button>
+
+        <button type="default" plain="true">{{button}}</button>
+        <button type="default" disabled="true" plain="true">{{button}}</button>
+
+        <button class="mini-btn" type="primary" size="mini">{{button}}</button>
+        <button class="mini-btn" type="default" size="mini">{{button}}</button>
+        <button class="mini-btn" type="warn" size="mini">{{button}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

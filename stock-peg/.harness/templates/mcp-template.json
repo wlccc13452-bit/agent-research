@@ -1,0 +1,79 @@
+{
+  "$schema": "https://github.com/anthropics/anthropic-quickstarts/raw/main/mcp/mcp-schema.json",
+  "$comment": "Shared MCP configuration template for stock-peg project. Copy to: .codebuddy/mcp-config.json, .cursor/mcp.json, or VSCode settings",
+  
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-playwright"],
+      "env": {},
+      "$comment": "Browser automation - navigate, screenshot, click, fill forms"
+    },
+    
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic-ai/mcp-server-filesystem",
+        "${PROJECT_ROOT}"
+      ],
+      "env": {},
+      "$comment": "File system operations - read, write, search. Replace ${PROJECT_ROOT} with actual path"
+    },
+    
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "$comment": "GitHub integration - repos, issues, PRs. Requires GITHUB_TOKEN env var"
+    },
+    
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      },
+      "$comment": "Web search via Brave API. Requires BRAVE_API_KEY env var"
+    },
+    
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-memory"],
+      "env": {},
+      "$comment": "Persistent storage across sessions"
+    }
+  },
+  
+  "_instructions": {
+    "setup": [
+      "1. Copy this template to your tool's config location:",
+      "   - CodeBuddy: .codebuddy/mcp-config.json",
+      "   - Cursor: .cursor/mcp.json or ~/.cursor/mcp.json",
+      "   - VSCode: Add to claude.mcpServers in settings.json",
+      "",
+      "2. Replace ${PROJECT_ROOT} with actual path (e.g., d:/2026projects/stocks-research/stock-peg)",
+      "",
+      "3. Set environment variables for API keys:",
+      "   Windows: $env:GITHUB_TOKEN = 'your-token'",
+      "   Linux/Mac: export GITHUB_TOKEN='your-token'",
+      "",
+      "4. Restart your IDE after configuration",
+      "",
+      "5. Verify: MCP tools should appear with 'mcp__' prefix"
+    ],
+    
+    "disable_server": [
+      "To disable a server, remove it from mcpServers object or set disabled: true",
+      "Example: \"playwright\": { \"disabled\": true, ... }"
+    ],
+    
+    "security": [
+      "NEVER commit API keys to version control",
+      "Use environment variables for secrets",
+      "This template file is safe to commit (uses ${} placeholders)"
+    ]
+  }
+}

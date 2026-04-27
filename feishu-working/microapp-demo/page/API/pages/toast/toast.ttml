@@ -1,0 +1,42 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'show/hide toast/loading'}}"/>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <view class="body-view">
+        <button type="default" bindtap="toast1Tap">{{default_toast}}</button>
+      </view>
+      <view class="body-view">
+        <button type="default" bindtap="toast2Tap">duration 3000 ，with success icon</button>
+      </view>
+      <view class="body-view">
+        <button type="default" bindtap="toast3Tap">duration 3000 ，with loading icon</button>
+      </view>
+      <view class="body-view">
+        <button type="default" bindtap="toast4Tap">duration 3000 ，with none icon</button>
+      </view>
+			<view class="body-view">
+        <button type="default" bindtap="toast5Tap">toast with mask</button>
+      </view>
+      <view class="body-view">
+        <button type="default" bindtap="hideToast">{{hide_toast}}</button>
+      </view>
+    </view>
+  </view>
+
+	<view class="page-body">
+    <view class="btn-area">
+      <view class="body-view">
+        <button type="default" bindtap="showLoadingTap">showLoading</button>
+      </view>
+      <view class="body-view">
+        <button type="default" bindtap="hideLoadingTap">hideLoading</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

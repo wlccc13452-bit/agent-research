@@ -1,0 +1,10 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{local_image}}</view>
+    <image class="image" src="../resources/pic/local_image.png"/>
+  </view>
+  <view class="section">
+    <view class="title">{{net_image}}</view>
+    <image class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sunset_2007-1.jpg/800px-Sunset_2007-1.jpg"/>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+[CHECK] Harness Integrity Checker
+============================================================
+
+[CORE_FILES]
+  [PASS] AGENTS.md
+  [PASS] progress.md
+  [PASS] decisions.md
+  [PASS] memory/core-facts.md
+
+[SKILLS_REGISTRY]
+  [PASS] registry.json parse
+
+[REFERENCE_REGISTRY]
+  [PASS] registry.json parse
+  [PASS] Document paths - All 9 exist
+  [WARN] Unregistered files - FOUND 244
+
+[AGENTS_CONSTRAINT]
+  [FAIL] AGENTS.md size - EXCEEDS LIMIT: 304/300 lines
+
+[VERIFICATION_EVIDENCE]
+  [FAIL] Task sdk153-fix - Directory MISSING
+  [FAIL] Task card-system-ui-evaluation - Directory MISSING
+  [FAIL] Task p2-async-session-tests - NO LOG FILES
+
+============================================================
+
+[WARNINGS] 1 warnings:
+  - Unregistered reference files: 244
+
+[ERRORS] 4 errors detected:
+  - AGENTS.md exceeds limit: 304 lines
+  - Missing test directory: sdk153-fix
+  - Missing test directory: card-system-ui-evaluation
+  - Missing test logs: p2-async-session-tests
+
+[FAIL] HARNESS_INTEGRITY_FAILURE

@@ -1,0 +1,4 @@
+# ~/.zshrc 或 ~/.bashrc
+export CODEBUDDY_WECOM_BOT_ID="aibcDu9fXUA0d5zbwnGYIvs597WAHV3BqY7"
+export CODEBUDDY_WECOM_BOT_SECRET="qswb9NJgNElBv2TX3S12zIyXIA4t9BqmbkbsITMnRUK"
+

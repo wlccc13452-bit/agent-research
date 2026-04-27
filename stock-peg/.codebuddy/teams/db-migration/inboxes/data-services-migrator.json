@@ -1,0 +1,11 @@
+[
+  {
+    "id": "msg-1773908454848-t87luo",
+    "from": "team-lead",
+    "to": "data-services-migrator",
+    "type": "message",
+    "content": "请报告当前迁移进度：\n1. 已读取的目标文件\n2. 发现的数据库操作\n3. 需要创建的新 operations 函数\n4. 已完成的修改",
+    "timestamp": "2026-03-19T08:20:54.848Z",
+    "read": true
+  }
+]

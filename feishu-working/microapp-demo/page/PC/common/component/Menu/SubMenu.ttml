@@ -1,0 +1,6 @@
+<view class="sub-menu {{ active ? 'active' : ''}}">
+  <view class="title" bindtap="onClick">{{ title }}<view class="arrow-icon {{ active ? 'opened' : ''}}"></view></view>
+  <view class="dropdown">
+    <slot></slot>
+  </view>
+</view>

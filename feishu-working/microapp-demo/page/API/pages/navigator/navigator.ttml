@@ -1,0 +1,20 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'navigateTo/Back, redirectTo'}}"/>
+
+  <view class="page-body">
+    <view class="btn-area">
+      <view>{{current_page_identifier}} {{ now }}</view>
+      <button bindtap="navigateTo">{{lifecycle}}</button>
+      <button bindtap="navigateBack">navigateBack</button>
+      <button bindtap="redirectTo">redirectTo</button>
+      <button bindtap="reLaunch">reLaunch</button>
+      <button bindtap="switchTab">switchTab</button>
+      <button bindtap="exitMiniProgram">exitMiniProgram</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

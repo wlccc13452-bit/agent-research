@@ -1,0 +1,41 @@
+---
+description: Register /update-memory as harness memory sync command
+alwaysApply: true
+enabled: true
+updatedAt: 2026-03-14T10:00:00.000Z
+provider: 
+---
+
+# Harness Memory Update Command
+
+## Trigger
+When user types `/update-memory` or says "update memory now" or "save session summary"
+
+## Actions
+Execute in strict order:
+1. Read `.harness/memory/core-facts.md`
+2. Read `.harness/decisions.md`
+3. Read `.harness/progress.md`
+4. Read `.harness/AGENTS.md`
+5. Ensure `.harness/memory/session-summaries/` exists
+6. Update `.harness/progress.md` with current-session completions
+7. Append new decisions into `.harness/decisions.md` only if non-duplicate
+8. Create or append `.harness/memory/session-summaries/YYYY-MM-DD.md`
+
+Fallback behavior:
+- If progress.md missing, create with default sections
+- If decisions.md missing, create with default header
+- If core-facts.md missing, continue with "No core facts"
+- If AGENTS.md missing, stop and report harness not initialized
+
+## Response Format
+Return this structure:
+1. `Memory update complete`
+2. `Updated files: [list with absolute paths]`
+3. `Decisions added: [count]`
+4. `Session summary: [absolute path]`
+
+## Important
+- Must avoid duplicate decisions
+- Must not overwrite existing session summary content
+- This command is independent from `/harness` and can run directly

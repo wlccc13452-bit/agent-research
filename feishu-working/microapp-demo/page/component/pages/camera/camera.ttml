@@ -1,0 +1,28 @@
+<scroll-view class="page-body">
+  <view class="page-body-wrapper">
+    <camera
+    id="myCamera"
+    binderror="binderror"
+    bindstop="bindstop"
+    bindinitdone="bindinitdone"
+    bindinserted="bindinserted"
+    style="width: 100%; height: 300px"/>
+    
+    <view class="btn-area">
+      <button type="primary" bindtap="takePhoto">{{take_photo}}</button>
+    </view>
+
+    <view class="btn-area">
+      <button type="primary" bindtap="startRecord">{{start_record}}</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="stopRecord">{{stop_record}}</button>
+    </view>
+    <view class="preview-tips" tt:if="{{src}}">{{preview_tips}}</view>
+    <view class="btn-area" tt:if="{{src}}">
+      <button type="primary" bindtap="previewImage">{{preview_image}}</button>
+    </view>
+    <video tt:if="{{videoSrc}}" class="video" src="{{videoSrc}}"/>
+
+  </view>
+</scroll-view>

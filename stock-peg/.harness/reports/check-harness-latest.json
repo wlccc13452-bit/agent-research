@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-03-15T17:28:08.082682+00:00",
+  "projectRoot": "D:\\2026projects\\stocks-research\\stock-peg",
+  "summary": {
+    "total": 49,
+    "passed": 48,
+    "failed": 1,
+    "status": "fail"
+  },
+  "checks": [
+    {
+      "name": "Required file: .harness/AGENTS.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Required file: .harness/progress.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Required file: .harness/decisions.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Required file: .harness/memory/core-facts.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Routing file: .codebuddy/rules/harness-loader.mdc",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Routing file: .codebuddy/rules/update-memory.mdc",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "Routing file: .harness/skills/registry.json",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "registry.json parse",
+      "ok": true,
+      "details": "valid JSON"
+    },
+    {
+      "name": "Registry field: version",
+      "ok": true,
+      "details": "value='2.0.0'"
+    },
+    {
+      "name": "Registry field: lastUpdated",
+      "ok": true,
+      "details": "value='2026-03-15'"
+    },
+    {
+      "name": "Registry field: commands",
+      "ok": true,
+      "details": "type=dict"
+    },
+    {
+      "name": "Registry command coverage: /harness",
+      "ok": true,
+      "details": "present"
+    },
+    {
+      "name": "Registry command coverage: /update-memory",
+      "ok": true,
+      "details": "present"
+    },
+    {
+      "name": "Registry command coverage: /check-harness",
+      "ok": true,
+      "details": "present"
+    },
+    {
+      "name": "Registry command coverage: /daily-watchlist",
+      "ok": true,
+      "details": "present"
+    },
+    {
+      "name": "Command /harness: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /harness: type",
+      "ok": true,
+      "details": "value='loader'"
+    },
+    {
+      "name": "Command /harness: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/utils/harness-loader/SKILL.md'"
+    },
+    {
+      "name": "Command /harness: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/utils/harness-loader/SKILL.md"
+    },
+    {
+      "name": "Command /update-memory: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /update-memory: type",
+      "ok": true,
+      "details": "value='memory-sync'"
+    },
+    {
+      "name": "Command /update-memory: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/utils/update-memory/SKILL.md'"
+    },
+    {
+      "name": "Command /update-memory: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/utils/update-memory/SKILL.md"
+    },
+    {
+      "name": "Command /check-harness: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /check-harness: type",
+      "ok": true,
+      "details": "value='health-check'"
+    },
+    {
+      "name": "Command /check-harness: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/utils/check-harness/SKILL.md'"
+    },
+    {
+      "name": "Command /check-harness: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/utils/check-harness/SKILL.md"
+    },
+    {
+      "name": "Command /validate: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /validate: type",
+      "ok": true,
+      "details": "value='quality-gate'"
+    },
+    {
+      "name": "Command /validate: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/utils/validate/SKILL.md'"
+    },
+    {
+      "name": "Command /validate: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/utils/validate/SKILL.md"
+    },
+    {
+      "name": "Command /dispute: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /dispute: type",
+      "ok": true,
+      "details": "value='meta-cognition'"
+    },
+    {
+      "name": "Command /dispute: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/utils/dispute/SKILL.md'"
+    },
+    {
+      "name": "Command /dispute: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/utils/dispute/SKILL.md"
+    },
+    {
+      "name": "Command /daily-watchlist: name format",
+      "ok": true,
+      "details": "kebab-case with leading slash required"
+    },
+    {
+      "name": "Command /daily-watchlist: type",
+      "ok": true,
+      "details": "value='feature'"
+    },
+    {
+      "name": "Command /daily-watchlist: primarySkill",
+      "ok": true,
+      "details": "value='.harness/skills/daily-watchlist/SKILL.md'"
+    },
+    {
+      "name": "Command /daily-watchlist: primarySkill path exists",
+      "ok": true,
+      "details": ".harness/skills/daily-watchlist/SKILL.md"
+    },
+    {
+      "name": "AGENTS skill path: .harness/skills/daily-watchlist/SKILL.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .codebuddy/rules/harness-loader.mdc",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .codebuddy/rules/update-memory.mdc",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .harness/",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .harness/AGENTS.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .harness/memory/",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .harness/skills/daily-watchlist/SKILL.md",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "AGENTS link: .harness/skills/registry.json",
+      "ok": true,
+      "details": "exists"
+    },
+    {
+      "name": "core-facts validation baseline",
+      "ok": true,
+      "details": "section found"
+    },
+    {
+      "name": "Tracked .env file check",
+      "ok": false,
+      "details": "frontend/.env"
+    }
+  ]
+}

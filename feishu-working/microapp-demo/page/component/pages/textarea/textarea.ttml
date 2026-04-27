@@ -1,0 +1,21 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">{{height_auto_fix_textarea}}</view>
+      <view class="textarea-wrp">
+        <textarea bindblur="bindTextAreaBlur" maxlength=-1 auto-height />
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">{{auto_focus_textare}}</view>
+      <view class="textarea-wrp">
+        <textarea auto-focus="true" maxlength=-1 style="height: 3em" />
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

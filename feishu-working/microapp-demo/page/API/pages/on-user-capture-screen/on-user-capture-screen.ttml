@@ -1,0 +1,11 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+<view class="container">
+  <template is="head" data="{{title: 'onUserCaptureScreen'}}" />
+  <view class="page-body">
+    <text>{{please_capture}}</text>
+    <text class="result">{{result}}</text>
+    <button class="btn" bindtap="offObserver">{{cancel_listening}}</button>
+  </view>
+  <template is="foot" />
+</view>

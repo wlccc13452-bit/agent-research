@@ -1,0 +1,23 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'Get Launch Query'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <text class="page-body-text-small">Launch Query</text>
+        <text>{{launchQuery}}</text>
+      </view>
+    </view>
+    <view class="btn-area">
+        <button type="primary" bindtap="getHostLaunchQuery">getHostLaunchQuery</button>
+    </view>
+    <view class="btn-area">
+        <button type="primary" bindtap="getHostLaunchQuerySync">getHostLaunchQuerySync</button>
+    </view>
+  </view>
+  
+  <template is="foot" />
+</view>

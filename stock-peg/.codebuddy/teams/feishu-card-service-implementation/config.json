@@ -1,0 +1,18 @@
+{
+  "name": "feishu-card-service-implementation",
+  "leadAgentId": "1d17467ed29e4736b1f7f1f1ea91ccf6",
+  "workspacePath": "d:/2026projects/stocks-research/stock-peg",
+  "createdAt": "2026-03-18T17:02:58.095Z",
+  "options": {
+    "workspacePath": "d:/2026projects/stocks-research/stock-peg",
+    "isAutoTeam": false
+  },
+  "members": [
+    {
+      "memberId": "team-lead@feishu-card-service-implementation",
+      "name": "team-lead",
+      "role": "Team Lead - coordinates the team and interacts with the user"
+    }
+  ],
+  "isAutoTeam": false
+}

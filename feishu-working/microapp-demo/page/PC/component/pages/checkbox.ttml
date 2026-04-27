@@ -1,0 +1,28 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">{{default_style}}</view>
+    <view class="checkbox-container">
+      <label class="checkbox">
+        <checkbox value="cb" checked="true"/>{{selected}}
+      </label>
+    </view>
+    <view class="checkbox-container">
+      <label class="checkbox">
+        <checkbox value="cb" />{{unselected}}
+      </label>
+    </view>
+  </view>
+  <view class="section">
+    <view class="title">Disabled</view>
+      <view class="checkbox-container">
+        <label class="checkbox">
+          <checkbox value="cb" checked="true" disabled/>{{selected}}
+        </label>
+      </view>
+      <view class="checkbox-container">
+        <label class="checkbox">
+          <checkbox value="cb" disabled/>{{unselected}}
+        </label>
+      </view>
+  </view>
+</view>

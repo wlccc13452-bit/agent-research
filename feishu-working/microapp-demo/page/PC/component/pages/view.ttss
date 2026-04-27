@@ -1,0 +1,15 @@
+@import "/page/PC/common/index.ttss";
+
+.flex-wrp{
+  margin-top: 10px;
+  display:flex;
+}
+.flex-item{
+  width: 200px;
+  height: 300px;
+}
+.flex-item-V{
+  /* margin: 0 auto; */
+  width: 250px;
+  height: 150px;
+}

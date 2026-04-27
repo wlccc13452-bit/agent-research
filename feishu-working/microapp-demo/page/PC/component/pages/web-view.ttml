@@ -1,0 +1,8 @@
+<view class="page-container {{isHide ? 'hide' : ''}}">
+  <view class="section">
+    <view class="title">
+      <text>{{open_webview_tip}}</text>
+    </view>
+    <button type="primary" bindtap="openWebview">Click me</button>
+  </view>
+</view>

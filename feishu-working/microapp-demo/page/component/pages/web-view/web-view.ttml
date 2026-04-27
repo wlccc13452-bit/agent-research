@@ -1,0 +1,10 @@
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <web-view src={{page_url}} bindload="loadDone" binderror = "errorLoad" progressbar-color="#CC3333"></web-view>
+    </view>
+  </view>
+  <template is="foot" />
+</view>
